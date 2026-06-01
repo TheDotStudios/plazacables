@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Plaza Cables, Wires, Electrical Solutions, PCG, Action Wires">
+    <meta name="description" content="Plaza Group - Advanced Wires, Cables & Electrical Solutions You Can Trust">
+    <meta name="author" content="Plaza Group">
+    <title>Plaza Cables – Powering Safer Connections</title>
+     <link rel="shortcut icon" href="assets/imgs/favicon.png">
+    <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+   
+        /* ── Certifications Section ─────────────────────────── */
+        .cert-section { padding: 120px 0; }
+        .cert-brand-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cert-brand-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .cert-card {
+            border-radius: 20px;
+            padding: 28px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 130px;
+            gap: 14px;
+            transition: transform 0.3s ease;
+        }
+        body.light .cert-card { background: #f4f4f4; }
+        body:not(.light) .cert-card { background: #1c1c1c; }
+        .cert-card:hover { transform: translateY(-4px); }
+        .cert-card .cert-icon {
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+            background: #DDF160;
+            color: #111;
+            font-size: 22px;
+        }
+        .cert-card .cert-name { font-size: 13px; font-weight: 600; }
+        .cert-card .cert-sub { font-size: 11px; opacity: 0.55; }
+
+        /* ── Clients / Trusted By Section ───────────────────── */
+        .clients-section { padding: 120px 0; }
+        .clients-marquee-wrap { overflow: hidden; width: 100%; }
+        .clients-marquee-track {
+            display: flex;
+            gap: 0;
+            animation: marqueeScroll 30s linear infinite;
+            width: max-content;
+        }
+        .clients-marquee-track:hover { animation-play-state: paused; }
+        @keyframes marqueeScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .client-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            margin: 8px 10px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.3s;
+        }
+        body.light .client-pill { background: #f0f0f0; color: #1a1a1a; }
+        body:not(.light) .client-pill { background: #1c1c1c; color: #e0e0e0; }
+        .client-pill .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: #DDF160;
+            flex-shrink: 0;
+        }
+        .client-category-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+        }
+        .clients-row-wrap { margin-bottom: 30px; }
+
+        /* ── CTA Section ────────────────────────────────────── */
+        /* .plaza-cta-section { padding: 120px 0 0; } */
+        .plaza-cta-inner {
+            border-radius: 40px;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        body.light  .plaza-cta-inner { background: #111; color: #fff; }
+        body:not(.light) .plaza-cta-inner { background: #1c1c1c; color: #fff; }
+        .plaza-cta-inner::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: #DDF160;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .plaza-cta-inner h2 { font-size: clamp(32px, 5vw, 60px); font-weight: 700; color: #fff; margin-bottom: 20px; }
+        .plaza-cta-inner p  { opacity: 0.7; max-width: 560px; line-height: 1.7; }
+        .cta-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            background: #DDF160;
+            color: #111 !important;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(221,241,96,0.35); }
+        .cta-btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            color: #fff !important;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .cta-btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+
+        /* ── Industries grid (Why Choose + Industries) ──────── */
+        .industries-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 50px; }
+        @media(min-width:992px){ .industries-grid { grid-template-columns: repeat(4,1fr); } }
+        .industry-card {
+            border-radius: 24px;
+            padding: 36px 28px;
+            display: flex; flex-direction: column; gap: 16px;
+        }
+        body.light .industry-card { background: #f4f4f4; }
+        body:not(.light) .industry-card { background: #1c1c1c; }
+        .industry-card .ic-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: #DDF160;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: #111;
+        }
+        .industry-card h6 { font-size: 16px; font-weight: 700; margin: 0; }
+        .industry-card p  { font-size: 14px; opacity: 0.6; margin: 0; }
+
+        /* misc tweaks */
+        .bord-top { border-top: 1px solid rgba(255,255,255,0.08); }
+        body.light .bord-top { border-top: 1px solid rgba(0,0,0,0.08); }
+        .sec-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sec-label::before { content:''; width:20px; height:2px; background:#DDF160; border-radius:2px; }
+    </style>
+</head>
+
+<body class="digital-agency light">
+
+    <!-- Loader -->
+  <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-wrap-heading">
+    <div class="load-text">
+        <span>P</span><span>l</span><span>a</span><span>z</span><span>a</span><span>C</span><span>a</span><span>b</span><span>l</span><span>e</span><span>s</span>
+    </div>
+</div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="blur-div"></div>
+
+    <!-- Progress scroll -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+  <!-- ==================== Navbar ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+            <a class="logo w-100px" href="index.html">
+                <img src="assets/imgs/logo.png" alt="Plaza Cables Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="rolling-text">Home</span></a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#!"><span class="rolling-text">About Us</span></a></li> -->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">About Us</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">Plaza Group</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Leadership</a></li>
+                            <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                            <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                            <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                            <li><a class="dropdown-item" href="infrastructure.html">Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="csr.html">CSR</a></li>
+                            <li><a class="dropdown-item" href="research.html">Research & Development</a></li>
+                            <li><a class="dropdown-item" href="network.html">Sales & Distributors Network</a></li>
+                             <li><a class="dropdown-item" href="events.html">Events</a></li>
+                            <li><a class="dropdown-item" href="casestudy.html">Case Studies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html"><span class="rolling-text">Products</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="investor-relation.html"><span class="rolling-text">Investor Relation</span></a></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Investor Relation</span></a>
+                           <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#!">Financial Performance</a></li>
+                            <li><a class="dropdown-item" href="#!">Corporate Governance</a></li>
+                            <li><a class="dropdown-item" href="#!">Public Issue</a></li>
+                            <li><a class="dropdown-item" href="#!">Shareholding Pattern</a></li>
+                            <li><a class="dropdown-item" href="#!">Policies</a></li>
+                            <li><a class="dropdown-item" href="#!">Committee of Board</a></li>
+                            <li><a class="dropdown-item" href="#!">Advertisement</a></li>
+                            <li><a class="dropdown-item" href="#!">Annual Return</a></li>
+                            <li><a class="dropdown-item" href="#!">Annual Report</a></li>
+                            <li><a class="dropdown-item" href="#!">Other Documents</a></li>
+                            <li><a class="dropdown-item" href="#!">Investor Grievances Contact</a></li>
+                            <li><a class="dropdown-item" href="#!">Group Companies</a></li>
+                            <li><a class="dropdown-item" href="#!">Previous Names of the Company</a></li>
+                        </ul>
+                    </li> -->
+               
+                    <li class="nav-item"><a class="nav-link" href="news.html"><span class="rolling-text">News</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html"><span class="rolling-text">Careers</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><span class="rolling-text">Contact Us</span></a></li>
+                </ul>
+            </div>
+            <a href="contact.html" class="butn-arrow">
+                <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
+                <span class="arrow-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+    <!-- ==================== End Navbar ==================== -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="o-hidden">
+
+          <!-- ==================== Breadcrumb Banner (parallax) ==================== -->
+                <header class="pc-page-head pc-banner">
+                    <div class="bg-img" data-background="assets/imgs/work-ethos.webp" data-speed="0.7" data-lag="0"></div>
+                    <div class="pc-banner-overlay"></div>
+                    <div class="container">
+                       
+                        <div class="row align-items-end">
+                            <div class="col-lg-8">
+                                 <nav class="pc-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="current">sustainability</span></nav>
+                                <h1 class="fs-75">  sustainability
+</h1>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="pc-head-lead"> Modern facilities built for quality, efficiency, and large-scale production.
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+ 
+ 
+<!-- ==================== Raw Materials — Wires & Pipes (serv-style4) ==================== -->
+<section class="pt-100px pb-200px">
+    <div class="container">
+ 
+        <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.1">
+            <div class="row justify-content-between">
+                <div class="col-lg-4">
+                    <h6 class="pc-eyebrow text-uppercase">Raw Materials</h6>
+                </div>
+                <div class="col-lg-5">
+                    <p class="fs-18">High-grade inputs carefully sourced from trusted suppliers to ensure durability and consistent performance across every product we manufacture.</p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="row md-marg">
+ 
+            <!-- Wires card -->
+            <div class="col-lg-6" data-ui-animate data-delay="0.2">
+                <div class="  serv-style4-item1 sub-bg border-radius-30px p-60px position-relative overflow-hidden">
+                    <div class="serv-style4-bg-img1">
+                        <img src="assets/imgs/8.webp" alt="Wires Raw Materials">
+                    </div>
+                    <div class="v-align-between h-100 pt-20px">
+                        <div>
+                            <span class="plz-sus-kicker mb-10px d-block">Wires &amp; Cables</span>
+                            <h3 class="fs-32 mb-30px">Premium Conductor &amp; Insulation Materials</h3>
+                            <p class="fs-16 mb-40px">Our wires and cables are produced using premium materials that deliver excellent conductivity, insulation, and long-lasting performance.</p>
+                        </div>
+                        <div>
+                            <ul class="plz-sus-matlist">
+                                <li><span class="plz-sus-dot"></span>99.9% Pure Copper</li>
+                                <li><span class="plz-sus-dot"></span>PVC Compounds</li>
+                                <li><span class="plz-sus-dot"></span>Aluminum</li>
+                                <li><span class="plz-sus-dot"></span>Steel Strips</li>
+                                <li><span class="plz-sus-dot"></span>XLPE Compounds</li>
+                                <li><span class="plz-sus-dot"></span>Colored Masterbatches</li>
+                            </ul>
+                            <div class="plz-sus-pkg mt-30px bord-top pt-30px">
+                                <span class="d-block fs-12 text-uppercase  mb-10px">Packaging</span>
+                                <p class="fs-16">Wooden or steel drums, cardboard master cartons, and gunny bags for safe storage and transportation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Pipes card -->
+            <div class="col-lg-6" data-ui-animate data-delay="0.3">
+               <div class="  serv-style4-item1 sub-bg border-radius-30px p-60px position-relative overflow-hidden">
+                    <div class="serv-style4-bg-img1">
+                        <img src="assets/imgs/8.webp" alt="Wires Raw Materials">
+                    </div>
+                    <div class="v-align-between h-100 pt-20px">
+                        <div>
+                            <span class="plz-sus-kicker mb-10px d-block">PVC Conduit Pipes</span>
+                            <h3 class="fs-32 mb-30px">High-Strength Pipe Compounds</h3>
+                            <p class="fs-16 mb-40px">Our PVC conduit pipes are manufactured using materials that enhance strength, flexibility, and durability for reliable electrical wiring protection.</p>
+                        </div>
+                        <div>
+                            <ul class="plz-sus-matlist">
+                                <li><span class="plz-sus-dot"></span>High-Quality Resin</li>
+                                <li><span class="plz-sus-dot"></span>Calcium</li>
+                                <li><span class="plz-sus-dot"></span>DOP (Dioctyl Phthalate)</li>
+                                <li><span class="plz-sus-dot"></span>Specialized Plasticizers</li>
+                            </ul>
+                            <div class="plz-sus-pkg mt-30px bord-top pt-30px">
+                                <span class="d-block fs-12 text-uppercase  mb-10px">Performance Benefit</span>
+                                <p class="fs-16">Ensures reliable protection for electrical wiring while maintaining high performance in diverse installation environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+<!-- ==================== End Raw Materials ==================== -->
+ 
+ 
+<!-- ==================== Responsible Sourcing Intro ==================== -->
+<section class="plz-sus-banner pt-0 pb-0">
+    <div class="container-xxl">
+    <div class="plz-sus-banner-inner position-relative o-hidden border-radius-30px">
+    <div class="bg-img plz-sus-banner-bg"
+        data-background="assets/imgs/h10.png">
+    </div>
+    <div class="plz-sus-banner-overlay"></div>
+    <div class="container plz-sus-banner-content">
+        <div class="row align-items-center plz-sus-banner-row">
+            <div class="col-lg-7 py-100px">
+                <span class="butn-bord-sm plz-sus-banner-tag mb-30px d-inline-block">Responsible Sourcing</span>
+                <h2 class="text-white mb-30px">Responsible Sourcing &amp; Sustainable Practices</h2>
+                <p>We are committed to responsible sourcing and environmentally conscious manufacturing. From lead-free PVC and eco-friendly packaging to recycling initiatives and energy-efficient processes, our approach focuses on reducing environmental impact while maintaining high standards of product quality, safety, and sustainability.</p>
+            </div>
+            <div class="col-lg-4 offset-lg-1 py-100px">
+                <div class="plz-sus-cert-badge">
+                    <span class="plz-sus-cert-label d-block fs-12 text-uppercase ls-1 mb-10px">Working Toward</span>
+                    <h5 class="text-white mb-5px">ISO 14001</h5>
+                    <span class="plz-sus-cert-desc fs-13">Environmental Management System Compliance</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+<!-- ==================== End Banner ==================== -->
+ 
+ 
+<!-- ==================== Sustainable Practices (approach-style1 adapted) ==================== -->
+<section class="pt-200px pb-100px">
+    <div class="container">
+ 
+        <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.1">
+            <div class="row justify-content-between">
+                <div class="col-lg-4">
+                    <h6 class="pc-eyebrow text-uppercase">Our Practices</h6>
+                </div>
+                <div class="col-lg-5">
+                    <p class="fs-18">Fifteen pillars of sustainability guiding how we source, manufacture, and deliver every product.</p>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Top 4 — icon feature cards (approach-style1) -->
+        <div class="row md-marg mb-30px">
+ 
+            <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.2">
+                <div class="approach-style1 item sub-bg text-align-center mb-30px mt-lg-60px h-350px h-200px">
+                    <span class="plz-sus-icon mb-30px">
+                        <img src="assets/imgs/serv/1.svg" class="h-60px" alt="">
+                    </span>
+                    <h5 class="mb-20px">Lead-Free PVC</h5>
+                    <p class="fs-16">All PVC used in our products is completely free of lead, ensuring safety for consumers and minimizing environmental impact.</p>
+                </div>
+            </div>
+ 
+            <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.3">
+                <div class="approach-style1 item sub-bg text-align-center mb-30px mt-lg-60px h-350px h-200px">
+                    <span class="plz-sus-icon mb-30px">
+                        <img src="assets/imgs/serv/2.svg" class="h-60px" alt="">
+                    </span>
+                    <h5 class="mb-20px">Eco-Friendly Packaging</h5>
+                    <p class="fs-16">We minimize plastic in packaging, opting for cardboard and steel drums that can be efficiently reprocessed.</p>
+                </div>
+            </div>
+ 
+            <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.4">
+                <div class="approach-style1 item sub-bg text-align-center mb-30px mt-lg-60px h-350px h-200px">
+                    <span class="plz-sus-icon mb-30px">
+                        <img src="assets/imgs/serv/3.svg" class="h-60px" alt="">
+                    </span>
+                    <h5 class="mb-20px">Energy-Efficient Manufacturing</h5>
+                    <p class="fs-16">Our facilities use energy-efficient machinery and optimized processes to reduce power consumption across all plants.</p>
+                </div>
+            </div>
+ 
+            <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.5">
+                <div class="approach-style1 item sub-bg text-align-center mb-30px mt-lg-60px h-350px h-200px">
+                    <span class="plz-sus-icon mb-30px">
+                        <img src="assets/imgs/serv/4.svg" class="h-60px" alt="">
+                    </span>
+                    <h5 class="mb-20px">Water Conservation</h5>
+                    <p class="fs-16">We implement measures to minimize water usage and recycle water throughout our manufacturing operations.</p>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+<!-- ==================== End Top Practices ==================== -->
+ 
+ 
+<!-- ==================== All 15 Practices (accordion-style1 + list) ==================== -->
+<section class="pt-0 pb-200px">
+    <div class="container">
+        <div class="row">
+ 
+            <!-- Left column — accordion for 8 practices -->
+        <!-- Left column — accordion for 8 practices -->
+<div class="col-lg-6 pr-lg-60px" data-ui-animate data-delay="0.2">
+    <div class="accordion accordion-style1 bord-style2" id="susAccordion">
+
+        <!-- 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem1">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">01</span>
+                        <span class="fs-24 fw-600">Reuse of Raw Material Packaging</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem1" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">Packaging in which raw materials arrive at our Sikanderabad and Baddi facilities is actively reused, reducing waste at the source.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem2">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">02</span>
+                        <span class="fs-24 fw-600">Chemical Drum Recycling</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem2" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">All chemical drums supplied with raw materials are carefully collected and recycled to support a circular economy.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem3">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">03</span>
+                        <span class="fs-24 fw-600">Use of Certified Raw Materials</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem3" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">Wherever possible, raw materials are sourced from certified, environmentally responsible suppliers committed to sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem4">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">04</span>
+                        <span class="fs-24 fw-600">Waste Reduction</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem4" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">Production waste is minimized through process optimization, and leftover materials are either reused or responsibly sold back to suppliers for recycling.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem5">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">05</span>
+                        <span class="fs-24 fw-600">Employee Awareness Programs</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem5" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">Regular training for employees on sustainable practices and responsible handling of materials to embed a culture of environmental awareness.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem6">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">06</span>
+                        <span class="fs-24 fw-600">Continuous Improvement</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem6" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">We continually evaluate and upgrade our sourcing and production practices to meet evolving environmental standards and regulations.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem7">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">07</span>
+                        <span class="fs-24 fw-600">Digital Tracking of Materials</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem7" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">Implementing systems to track raw material usage to optimize efficiency and reduce waste across all manufacturing stages.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button collapsed d-flex align-items-center justify-content-between w-100" type="button" data-bs-toggle="collapse" data-bs-target="#susItem8">
+                    <div class="d-flex align-items-center gap-20px">
+                        <span class="plz-sus-num">08</span>
+                        <span class="fs-24 fw-600">Circular Economy Mindset</span>
+                    </div>
+                    <span class="icon-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                </button>
+            </div>
+            <div id="susItem8" class="accordion-collapse collapse" data-bs-parent="#susAccordion">
+                <div class="accordion-body pt-15px">
+                    <p class="fs-16">Not just recycling packaging, but also repurposing scrap materials into new products wherever feasible to close the production loop.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+            <!-- Right column — remaining 7 practices as list cards -->
+            <div class="col-lg-6 pl-lg-60px" data-ui-animate data-delay="0.3">
+                <div class="plz-sus-list-grid">
+ 
+                    <div class="plz-sus-list-item sub-bg border-radius-20px p-30px">
+                        <div class="d-flex align-items-start gap-15px">
+                            <span class="plz-sus-list-num">09</span>
+                            <div>
+                                <h6 class="mb-10px">Local Sourcing Wherever Possible</h6>
+                                <p class="fs-16">Reducing transportation emissions and supporting local communities by sourcing raw materials near our manufacturing facilities in Sikanderabad and Baddi.</p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="plz-sus-list-item sub-bg border-radius-20px p-30px">
+                        <div class="d-flex align-items-start gap-15px">
+                            <span class="plz-sus-list-num">10</span>
+                            <div>
+                                <h6 class="mb-10px">Eco-Conscious Product Design</h6>
+                                <p class="fs-16">Designing products for longer lifespan, reducing the need for frequent replacements and minimizing overall environmental impact through durability.</p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="plz-sus-list-item sub-bg border-radius-20px p-30px">
+                        <div class="d-flex align-items-start gap-15px">
+                            <span class="plz-sus-list-num">11</span>
+                            <div>
+                                <h6 class="mb-10px">Low-Emission Logistics</h6>
+                                <p class="fs-16">Partnering with logistics providers that prioritize low-emission vehicles and efficient delivery routes to reduce our supply chain footprint.</p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="plz-sus-list-item sub-bg border-radius-20px p-30px">
+                        <div class="d-flex align-items-start gap-15px">
+                            <span class="plz-sus-list-num">12</span>
+                            <div>
+                                <h6 class="mb-10px">Sustainability Certifications</h6>
+                                <p class="fs-16">Working toward compliance with ISO 14001 (Environmental Management) or similar environmental standards to formalize our sustainability commitment.</p>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Highlight callout card -->
+                    <div class="plz-sus-highlight border-radius-20px p-30px">
+                        <span class="d-block fs-12 text-uppercase ls-1 mb-15px" style="color:#ffffff; font-weight:700; letter-spacing:0.12em;">Our Commitment</span>
+                        <p style="color:rgba(255,255,255,0.8);">From lead-free PVC to circular economy practices — sustainability is not a checkbox at Plaza. It's embedded in every decision we make, from how we source our raw materials to how we deliver the final product.</p>
+                        <div class="mt-20px bord-top pt-20px" style="border-color:rgba(255,255,255,0.1);">
+                            <span class="fs-13 fw-600" style="color:#ffffff;">ISO 14001 · ISO 9001:2015</span>
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+ 
+
+<section class="plaza-cta-section pt-0 pb-0">
+    <div class="shape-bottom-left w-250px " data-speed="0.7" data-lag="0">
+        <!-- opacity-5 -->
+        <!-- <img src="assets/imgs/mshap3.png" alt=""> -->
+        <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
+    </div>
+    <div class="cta-inner o-hidden position-relative">
+        <div class="pc-container">
+            <div class="cta-wrapper">
+
+                <!-- Left: headline + CTA button + tagline -->
+                <div class="cta-content-left">
+                    <h2 class="cta-heading">
+                        Looking for Reliable<br>Electrical Solutions?
+                    </h2>
+                    <div class="cta-actions">
+                        <a href="#!" class="butn-arrow-white">
+                            <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
+                            <span class="arrow-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                            </span>
+                        </a>
+                        <span class="cta-tagline">[ Est. 1975 — Pan India ]</span>
+                    </div>
+                </div>
+
+                <!-- Right: description text -->
+                <div class="cta-content-right">
+                    <p class="cta-description">
+                        [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+ 
+     <footer class="pc-footer">
+  <div class="pc-footer__card">
+    <div class="pc-container">
+
+      <!-- description replacing the big title -->
+      <div class="pc-description">
+        <p>Starting from a fledgling organization 35 years ago, R K Cable — now known as Plaza Cables — has established itself as a major player in India's cable &amp; wire industry, delivering certified, high-performance electrical solutions trusted by homes, industries, and government institutions nationwide.</p>
+      </div>
+
+      <!-- 3-column grid -->
+      <div class="pc-grid">
+
+        <!-- col 1: address → phone → email -->
+        <div class="pc-col-1">
+          <div class="pc-addr-block">
+            <span class="pc-label">Address</span>
+            <p class="pc-addr">A-74, Okhla Industrial Area<br>Phase-II, New Delhi – 110020<br>India</p>
+          </div>
+
+          <div class="pc-contact-group">
+            <span class="pc-label">Contact</span>
+            <p class="pc-tel-toll"><span>Toll Free</span>18001218050</p>
+            <p class="pc-tel-num">+91 11 66369666</p>
+          </div>
+
+          <div class="pc-email-link">
+            <span class="pc-label">Email</span>
+            <a href="mailto:info@plazacables.com">info@plazacables.com</a>
+          </div>
+        </div>
+
+        <!-- col 2: brand title centered in grid -->
+        <div class="pc-col-2">
+          <div class="pc-connect-title" data-text="Plaza Cables" id="pcTitle">Plaza Cables<sup class="pc-reg">®</sup></div>
+        </div>
+
+        <!-- col 3: quick links -->
+        <div class="pc-col-3">
+          <span class="pc-label">Quick Links</span>
+          <div class="pc-links">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="news.html">News &amp; Media</a></li>
+              <li><a href="network.html">Our Network</a></li>
+              <li><a href="csr.html">CSR Activities</a></li>
+            </ul>
+            <ul>
+                 <li><a href="team.html">Team</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+             
+            </ul>
+          </div>
+
+          <div style="margin-top:32px;">
+            <span class="pc-label">Legal</span>
+            <div class="pc-links" style="grid-template-columns:1fr;">
+              <ul>
+                <li><a href="#!">Privacy Policy</a></li>
+                <li><a href="#!">Terms of Use</a></li>
+                <li><a href="#!">Disclaimer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pc-grid -->
+
+      <!-- copyright bar -->
+      <div class="pc-copy">
+        <span class="pc-copy__text">Plaza © 2026</span>
+        <ul class="pc-tags">
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1"> Triple Layer Insulated 3D wire </span><span class="pc-tag__t2"> Triple Layer Insulated 3D wire </span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Flame Retardant Flexible Cable</span><span class="pc-tag__t2">Flame Retardant Flexible Cable</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Telephone Cables</span><span class="pc-tag__t2">Telephone Cables</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Solar Cables</span><span class="pc-tag__t2">Solar Cables</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+        <span class="pc-copy__text pc-copy__since">[ Since 1975 ]</span>
+      </div>
+
+    </div><!-- /pc-container -->
+
+    <button class="pc-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M9 4L4 9M9 4L14 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="pc-footer__bottom-strip"></div>
+  </div>
+</footer>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <!-- plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/smoother-script.js"></script>
+    <script src="assets/js/springer.min.js"></script>
+    <!-- custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- <script>
+        $(function () {
+            var width = $(window).width();
+            if (width > 991) {
+                gsap.registerPlugin(ScrollTrigger);
+                let sections = gsap.utils.toArray(".hr-container .item-panel");
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hr-container",
+                        start: "center center",
+                        end: "bottom bottom",
+                        pin: true,
+                        scrub: 1,
+                        end: () => "+=" + document.querySelector(".hr-container").offsetWidth
+                    }
+                });
+            }
+        });
+    </script> -->
+    <script>
+        // Industries Swiper
+var industriesSwiper = new Swiper('.industries-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay:true,
+    navigation: {
+        nextEl: '.industries-next',
+        prevEl: '.industries-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        }
+    }
+});
+    </script>
+    <script>
+/* ============================================================
+   MAGNETIC LETTER EFFECT
+   Each letter scales vertically + lifts up based on how close
+   the cursor's X position is to that letter — peak under the
+   pointer, smoothly falling off to the sides (Gaussian).
+   Mirrors the original: scale(1, up to 1.6), translateY(up to -24%).
+   ============================================================ */
+(function () {
+  const title = document.querySelector('.pc-connect-title');
+  if (!title) return;
+ 
+  // --- build the word/letter spans from data-text ---
+  const text = title.dataset.text || title.textContent;
+  title.textContent = '';
+  text.split(' ').forEach((word, wi, arr) => {
+    const w = document.createElement('span');
+    w.className = 'pc-word';
+    [...word].forEach(ch => {
+      const l = document.createElement('span');
+      l.className = 'pc-letter';
+      l.textContent = ch;
+      w.appendChild(l);
+    });
+    title.appendChild(w);
+    if (wi < arr.length - 1) title.appendChild(document.createTextNode(' '));
+  });
+  const sup = document.createElement('sup');
+  sup.className = 'pc-reg';
+  sup.textContent = '®';
+  title.appendChild(sup);
+ 
+  const letters = Array.from(title.querySelectorAll('.pc-letter'));
+ 
+  // tuning — matches the reference dev-tools values
+  const MAX_SCALE = 0.2;   // extra scaleY at the peak  -> max 1.6
+  const MAX_LIFT  = 24;    // % upward translate at peak -> -24%
+  const SIGMA     = 0.95;  // spread of the wave (in letter-widths)
+ 
+  let pointerX = null, raf = null;
+ 
+  function render() {
+    raf = null;
+    if (pointerX === null) return;
+    for (const l of letters) {
+      const r = l.getBoundingClientRect();
+      const center = r.left + r.width / 2;
+      // distance in "letter widths" (scaleY/translateY don't change width, so this is stable)
+      const d = (pointerX - center) / Math.max(r.width, 1);
+      const intensity = Math.exp(-(d * d) / (2 * SIGMA * SIGMA));
+      const scaleY = 1 + MAX_SCALE * intensity;
+      const liftY  = -MAX_LIFT * intensity;
+      l.style.transform = `translate3d(0, ${liftY.toFixed(2)}%, 0) scale(1, ${scaleY.toFixed(3)})`;
+    }
+  }
+ 
+  function schedule() { if (raf === null) raf = requestAnimationFrame(render); }
+ 
+  title.addEventListener('pointermove', (e) => { pointerX = e.clientX; schedule(); });
+  title.addEventListener('pointerleave', () => {
+    pointerX = null;
+    for (const l of letters) l.style.transform = 'translate3d(0,0,0) scale(1,1)';
+  });
+})();
+</script>
+ 
+</body>
+</html>

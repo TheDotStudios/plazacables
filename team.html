@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Plaza Cables, Wires, Electrical Solutions, PCG, Action Wires">
+    <meta name="description" content="Plaza Group - Advanced Wires, Cables & Electrical Solutions You Can Trust">
+    <meta name="author" content="Plaza Group">
+    <title>Plaza Cables – Powering Safer Connections</title>
+     <link rel="shortcut icon" href="assets/imgs/favicon.png">  
+    <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+   
+        /* ── Certifications Section ─────────────────────────── */
+        .cert-section { padding: 120px 0; }
+        .cert-brand-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cert-brand-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .cert-card {
+            border-radius: 20px;
+            padding: 28px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 130px;
+            gap: 14px;
+            transition: transform 0.3s ease;
+        }
+        body.light .cert-card { background: #f4f4f4; }
+        body:not(.light) .cert-card { background: #1c1c1c; }
+        .cert-card:hover { transform: translateY(-4px); }
+        .cert-card .cert-icon {
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+            background: #DDF160;
+            color: #111;
+            font-size: 22px;
+        }
+        .cert-card .cert-name { font-size: 13px; font-weight: 600; }
+        .cert-card .cert-sub { font-size: 11px; opacity: 0.55; }
+
+        /* ── Clients / Trusted By Section ───────────────────── */
+        .clients-section { padding: 120px 0; }
+        .clients-marquee-wrap { overflow: hidden; width: 100%; }
+        .clients-marquee-track {
+            display: flex;
+            gap: 0;
+            animation: marqueeScroll 30s linear infinite;
+            width: max-content;
+        }
+        .clients-marquee-track:hover { animation-play-state: paused; }
+        @keyframes marqueeScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .client-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            margin: 8px 10px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.3s;
+        }
+        body.light .client-pill { background: #f0f0f0; color: #1a1a1a; }
+        body:not(.light) .client-pill { background: #1c1c1c; color: #e0e0e0; }
+        .client-pill .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: #DDF160;
+            flex-shrink: 0;
+        }
+        .client-category-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+        }
+        .clients-row-wrap { margin-bottom: 30px; }
+
+        /* ── CTA Section ────────────────────────────────────── */
+        /* .plaza-cta-section { padding: 120px 0 0; } */
+        .plaza-cta-inner {
+            border-radius: 40px;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        body.light  .plaza-cta-inner { background: #111; color: #fff; }
+        body:not(.light) .plaza-cta-inner { background: #1c1c1c; color: #fff; }
+        .plaza-cta-inner::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: #DDF160;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .plaza-cta-inner h2 { font-size: clamp(32px, 5vw, 60px); font-weight: 700; color: #fff; margin-bottom: 20px; }
+        .plaza-cta-inner p  { opacity: 0.7; max-width: 560px; line-height: 1.7; }
+        .cta-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            background: #DDF160;
+            color: #111 !important;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(221,241,96,0.35); }
+        .cta-btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            color: #fff !important;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .cta-btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+
+        /* ── Industries grid (Why Choose + Industries) ──────── */
+        .industries-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 50px; }
+        @media(min-width:992px){ .industries-grid { grid-template-columns: repeat(4,1fr); } }
+        .industry-card {
+            border-radius: 24px;
+            padding: 36px 28px;
+            display: flex; flex-direction: column; gap: 16px;
+        }
+        body.light .industry-card { background: #f4f4f4; }
+        body:not(.light) .industry-card { background: #1c1c1c; }
+        .industry-card .ic-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: #DDF160;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: #111;
+        }
+        .industry-card h6 { font-size: 16px; font-weight: 700; margin: 0; }
+        .industry-card p  { font-size: 14px; opacity: 0.6; margin: 0; }
+
+        /* misc tweaks */
+        .bord-top { border-top: 1px solid rgba(255,255,255,0.08); }
+        body.light .bord-top { border-top: 1px solid rgba(0,0,0,0.08); }
+        .sec-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sec-label::before { content:''; width:20px; height:2px; background:#DDF160; border-radius:2px; }
+    </style>
+</head>
+
+<body class="digital-agency light">
+
+    <!-- Loader -->
+     <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-wrap-heading">
+    <div class="load-text">
+        <span>P</span><span>l</span><span>a</span><span>z</span><span>a</span><span>C</span><span>a</span><span>b</span><span>l</span><span>e</span><span>s</span>
+    </div>
+</div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="blur-div"></div>
+
+    <!-- Progress scroll -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+  <!-- ==================== Navbar ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+            <a class="logo w-100px" href="index.html">
+                <img src="assets/imgs/logo.png" alt="Plaza Cables Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="rolling-text">Home</span></a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#!"><span class="rolling-text">About Us</span></a></li> -->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">About Us</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">Plaza Group</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Leadership</a></li>
+                            <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                            <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                            <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                            <li><a class="dropdown-item" href="infrastructure.html">Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="csr.html">CSR</a></li>
+                            <li><a class="dropdown-item" href="research.html">Research & Development</a></li>
+                            <li><a class="dropdown-item" href="network.html">Sales & Distributors Network</a></li>
+                             <li><a class="dropdown-item" href="events.html">Events</a></li>
+                            <li><a class="dropdown-item" href="casestudy.html">Case Studies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html"><span class="rolling-text">Products</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="investor-relation.html"><span class="rolling-text">Investor Relation</span></a></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Investor Relation</span></a>
+                           <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#!">Financial Performance</a></li>
+                            <li><a class="dropdown-item" href="#!">Corporate Governance</a></li>
+                            <li><a class="dropdown-item" href="#!">Public Issue</a></li>
+                            <li><a class="dropdown-item" href="#!">Shareholding Pattern</a></li>
+                            <li><a class="dropdown-item" href="#!">Policies</a></li>
+                            <li><a class="dropdown-item" href="#!">Committee of Board</a></li>
+                            <li><a class="dropdown-item" href="#!">Advertisement</a></li>
+                            <li><a class="dropdown-item" href="#!">Annual Return</a></li>
+                            <li><a class="dropdown-item" href="#!">Annual Report</a></li>
+                            <li><a class="dropdown-item" href="#!">Other Documents</a></li>
+                            <li><a class="dropdown-item" href="#!">Investor Grievances Contact</a></li>
+                            <li><a class="dropdown-item" href="#!">Group Companies</a></li>
+                            <li><a class="dropdown-item" href="#!">Previous Names of the Company</a></li>
+                        </ul>
+                    </li> -->
+               
+                    <li class="nav-item"><a class="nav-link" href="news.html"><span class="rolling-text">News</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html"><span class="rolling-text">Careers</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><span class="rolling-text">Contact Us</span></a></li>
+                </ul>
+            </div>
+            <a href="contact.html" class="butn-arrow">
+                <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
+                <span class="arrow-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+    <!-- ==================== End Navbar ==================== -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="o-hidden">
+
+         
+            <!-- ==================== Breadcrumb Banner (parallax) ==================== -->
+          <!-- ==================== Breadcrumb Banner (parallax) ==================== -->
+                <header class="pc-page-head pc-banner">
+                    <div class="bg-img" data-background="assets/imgs/newteam2.webp" data-speed="0.7" data-lag="0"></div>
+                    <div class="pc-banner-overlay"></div>
+                    <div class="container">
+                       
+                        <div class="row align-items-end">
+                           
+                            <div class="col-lg-8">
+                                  <nav class="pc-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="current">Team</span></nav>
+                                <h1 class="fs-75">  Team
+</h1>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="pc-head-lead"> Modern facilities built for quality, efficiency, and large-scale production.
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+<!-- ============ INNER SECTIONS — paste inside <main>, between your
+            breadcrumb and your CTA (both already in your page) ============ -->
+ 
+                <!-- ==================== Chairman Emeritus (In Memoriam) ==================== -->
+                <section class="pc-prod-section pt-100px">
+                    <div class="container">
+                        <div class="sec-head bord mb-30px" data-ui-animate data-delay="0.1">
+                            <h6 class="text-uppercase">In Memoriam</h6>
+                        </div>
+                        <div class="pc-chair" data-ui-animate data-delay="0.1">
+                            <div class="pc-chair-photo">
+                                <img src="assets/imgs/team-dummy-imagee.jpg" alt="Late Shri Bhim Sain Gupta">
+                                <!-- <div class="pc-ph">Portrait</div> -->
+                            </div>
+                            <div class="pc-chair-info">
+                                <span class="pc-chair-label">Chairman Emeritus</span>
+                                <h2 class="pc-chair-name">Late Shri Bhim Sain Gupta</h2>
+                                <p>It is with deep respect and gratitude that we remember our Chairman Emeritus, whose vision and values laid the foundation of Plaza Cables' remarkable 50-year journey. A man of grit, foresight and unwavering commitment, he steered Plaza through decades of growth, challenges and transformation — making quality not just a benchmark, but the very cornerstone of the organisation.</p>
+                                <p>Though he is no longer with us, his legacy lives on in every milestone we achieve, every product we deliver and every relationship we build. The strength of our past, built under his stewardship, makes the journey ahead even more inspiring.</p>
+                                <blockquote class="pc-chair-quote">
+                                    “Quality is not an act, but a habit. If we remain committed to excellence and stay true to our values, no challenge is too great, and no dream too distant.”
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+ 
+       
+                <section class="pc-prod-section pt-0">
+                    <div class="container">
+ 
+                        <div class="sec-head bord mb-30px" data-ui-animate data-delay="0.1">
+                            <div class="row align-items-end">
+                                <div class="col-lg-6">
+                                    <h6 class="text-uppercase">Key Management</h6>
+                                </div>
+                                <div class="col-lg-6">
+                                    <p class="fs-18 mb-0">A leadership team uniting decades of expertise across operations, finance, manufacturing and market development.</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="row pc-team-grid sm-marg mt-50px">
+ 
+                            <!-- 01 — Sanjay Gupta -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Sanjay Gupta">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Sanjay Gupta</h6>
+                                        <span class="pc-team-role">Chairman &amp; Managing Director</span>
+                                        <p class="pc-team-bio">A graduate with over 30 years of distinguished experience in the electrical industry, Sanjay leads the company with vision and strategic insight &mdash; driving business growth across operations, finance, sales and manufacturing.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>A graduate with over 30 years of distinguished experience in the electrical industry, Sanjay leads the company with vision and strategic insight. He drives business growth by overseeing operations, financial planning, sales performance, and manufacturing excellence.</p>
+                                        <p>With a focus on innovation, risk management, and operational efficiency, Sanjay ensures the company meets its goals while maintaining strong relationships with partners and stakeholders. His leadership combines expertise, strategic foresight, and a commitment to sustainable growth.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 02 — Sonia Gupta -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Sonia Gupta">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Sonia Gupta</h6>
+                                        <span class="pc-team-role">Whole-time Director</span>
+                                        <p class="pc-team-bio">Over 29 years of leadership in the electrical industry, specialising in strategic planning, financial oversight and manufacturing operations &mdash; with a focus on continuous improvement and operational excellence.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Sonia brings over 29 years of leadership experience in the Electrical Industry, specializing in strategic planning, financial oversight, and manufacturing operations. She builds strong relationships with partners and authorities, guides data-driven strategic decisions, and leads initiatives that strengthen the company's market position.</p>
+                                        <p>Sonia oversees budgeting, major expenditures, procurement, and investment planning while ensuring manufacturing processes meet quality, cost, and productivity goals. Her focus on continuous improvement and operational excellence supports the organization's long-term growth.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 03 — Abhishek Gupta -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Abhishek Gupta">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Abhishek Gupta</h6>
+                                        <span class="pc-team-role">Whole-time Director</span>
+                                        <p class="pc-team-bio">Over 12 years across the electrical and solar industry, guiding corporate strategy, sales and manufacturing. Educated in the US and UK, he brings strong financial-market insight to smarter decisions.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Abhishek brings over 12 years of leadership experience in the Electrical and Solar Industry, guiding corporate strategy, sales performance, and manufacturing operations. He ensures company values, policies, and legal guidelines are upheld while coordinating activities to meet operational targets.</p>
+                                        <p>Abhishek oversees corporate planning, budgeting, and risk management, and supports sales teams in achieving revenue and collection goals. Having studied in the US and UK, he has great knowledge and interest in financial markets, which allows him to draw valuable economic insights that support smarter financial decisions and contribute to company growth.</p>
+                                        <p>He also drives staff development and policy implementation. In manufacturing, he ensures timely production, quality standards, and cost efficiency. His balanced expertise and analytical approach strengthen the company's overall performance.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 04 — Aditya Gupta -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Aditya Gupta">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Aditya Gupta</h6>
+                                        <span class="pc-team-role">Whole-time Director</span>
+                                        <p class="pc-team-bio">Educated in the US with over 10 years in the electrical industry, Aditya leads business strategy, sales performance and operational coordination &mdash; driving cost-effective operations and market development.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Educated in the US, Aditya brings over 10 years of strong experience in the Electrical Industry, leading business strategy, sales performance, and operational coordination. He develops and executes strategic plans that align with the company's goals, identifying core competencies and driving cost-effective operations and market development.</p>
+                                        <p>Aditya creates initiatives to leverage market opportunities, reduce risks, and strengthen the company's competitive position. He oversees all business activities to ensure smooth, target-driven operations across departments. In sales, he regularly reviews performance with Sales Heads, monitors revenue and collection targets, and guides senior staff to achieve maximum productivity.</p>
+                                        <p>He evaluates reports, resolves issues, and provides practical solutions to support company growth. Aditya also promotes staff development through guidance and training approvals. His strategic mindset and hands-on leadership contribute to the organization's steady progress.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 05 — Ajay Kumar Batla -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Ajay Kumar Batla">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Ajay Kumar Batla</h6>
+                                        <span class="pc-team-role">Chief Financial Officer</span>
+                                        <p class="pc-team-bio">A qualified Chartered Accountant with Plaza since 2009, Ajay oversees financial planning, analysis, taxation and accounting &mdash; driving financial discipline and sustainable growth.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Ajay Batla, a qualified Chartered Accountant, has been an integral part of Plaza Cables since 2009. As CFO, he oversees financial planning, analysis, taxation, and accounting, and plays a key role in the company's strategic decision-making.</p>
+                                        <p>He is instrumental in shaping financial and tax strategies while guiding and monitoring the budgeting process. With his deep industry expertise and commitment to operational excellence, Ajay drives financial discipline across the organization and supports sustainable growth to strengthen the company's financial foundation for the future.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 06 — Manoj Gupta -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Manoj Gupta">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Manoj Gupta</h6>
+                                        <span class="pc-team-role">President &mdash; Sales &amp; Marketing</span>
+                                        <p class="pc-team-bio">With Plaza since 2007 and over 25 years of experience, Manoj leads all-India sales and marketing for the wires and cables division, strengthening market presence and channel relationships.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Manoj Gupta has been a key part of Plaza Cables since 2007 and brings with him over 25 years of industry experience. He leads the all-India sales and marketing operations for the wires and cables division, driving growth, strengthening market presence, and guiding high-performing teams across the country.</p>
+                                        <p>Manoj plays a vital role in shaping strategic sales initiatives, building strong customer and channel partner relationships, and identifying new market opportunities. His leadership is central to expanding the company's reach and delivering sustained business performance.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 07 — Bhavika Kapil -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Bhavika Kapil">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Bhavika Kapil</h6>
+                                        <span class="pc-team-role">Company Secretary &amp; Compliance Officer</span>
+                                        <p class="pc-team-bio">A qualified Company Secretary with over 5 years of experience, Bhavika manages all secretarial and compliance functions, supporting corporate governance and a culture of accountability.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Bhavika Kapil holds a Bachelor's degree in Commerce and is a qualified Company Secretary. With over 5 years of professional experience, she manages all secretarial and compliance functions for the company, ensuring adherence to statutory and regulatory requirements.</p>
+                                        <p>Bhavika plays a key role in supporting corporate governance and maintaining transparent and efficient compliance processes across the organization. Her proactive approach and attention to detail help safeguard the company's legal and regulatory interests while fostering a culture of accountability and ethical business practices.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 08 — Hema Gussain -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Hema Gussain">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Hema Gussain</h6>
+                                        <span class="pc-team-role">Vice President &mdash; Operations (Purchase)</span>
+                                        <p class="pc-team-bio">Hema leads purchase and supply-chain operations &mdash; global and domestic sourcing, procurement, cost control, vendor development and import-export compliance.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Hema Gussain leads the company's purchase and supply chain operations, managing global and domestic sourcing for House Wires, LT Cables, PVC Compounds, and Electrical Conduit Pipes. She oversees procurement of raw materials, machinery, spares, packaging, and consumables, while ensuring effective cost control, inventory optimization, and seamless production coordination.</p>
+                                        <p>Hema also drives vendor development and negotiations, manages import-export operations including customs clearance and compliance, and oversees EPCG license processing and export obligations, strengthening the company's operational efficiency and regulatory framework.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 09 — Sunandini Gupta -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Sunandini Gupta">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Sunandini Gupta</h6>
+                                        <span class="pc-team-role">Brand Head (PCG)</span>
+                                        <p class="pc-team-bio">With a background in Economics and Finance from the UK and three years at Deloitte, Sunandini strengthens PCG operations, leads high-performing teams and oversees the manufacturing plant.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Sunandini brings a strong blend of analytical expertise and innovative leadership to PCG. With a background in Economics and Finance from the UK and three years at Deloitte analyzing companies and growth strategies, she offers deep insight into what drives business success.</p>
+                                        <p>Over the past two years at PCG, Sunandini has strengthened operations, led high-performing teams, and introduced forward-thinking initiatives that enhance product quality and efficiency. She also oversees credit and recovery functions and manages the company's manufacturing plant, ensuring smooth operations and robust financial discipline.</p>
+                                        <p>Her strategic mindset and management skills continue to guide PCG toward sustainable growth and industry leadership.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 10 — Rajeshwar Krishna Tripathi -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Rajeshwar Krishna Tripathi">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Rajeshwar Krishna Tripathi</h6>
+                                        <span class="pc-team-role">General Manager &mdash; Legal</span>
+                                        <p class="pc-team-bio">A B.A. LL.B. with over 35 years in corporate legal affairs, overseeing contract management, litigation, regulatory compliance and overall legal governance across the organisation.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Rajeshwar Krishna Tripathi holds a B.A. LL.B. degree and brings over 35 years of extensive experience in corporate legal affairs. As General Manager &mdash; Legal, he oversees contract management, litigation, regulatory compliance, and overall legal governance across the organization.</p>
+                                        <p>He plays a critical role in managing disputes, coordinating with external counsel, ensuring timely statutory and court compliances, and developing legal policies and SOPs. Through his strategic legal advice and risk-focused approach, he supports sound decision-making and protects the company's legal and commercial interests.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 11 — Kavita Sharma -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Kavita Sharma">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Kavita Sharma</h6>
+                                        <span class="pc-team-role">Legal Retainer &mdash; Employment Laws</span>
+                                        <p class="pc-team-bio">M.Sc., MBA (HR) and LL.B. with over 18 years in employment and labour law, advising HR across the employee lifecycle and ensuring payroll and statutory compliance.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Kavita Sharma holds an M.Sc., MBA (HR), and LL.B., and has over 18 years of experience in employment and labor laws. As Legal Retainer &mdash; Employment Laws, she provides specialized legal advisory support to HR on employee lifecycle matters including hiring, disciplinary actions, and separations.</p>
+                                        <p>She is responsible for drafting and reviewing employment and HR documentation, ensuring payroll and statutory compliances, and supporting dispute resolution before labor authorities. Her expertise helps strengthen compliant HR practices and minimize employment-related risks.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 12 — Rajeev Chaudhary -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Rajeev Chaudhary">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Rajeev Chaudhary</h6>
+                                        <span class="pc-team-role">Product &amp; Sales Head &mdash; Pipe &amp; Allied Accessories</span>
+                                        <p class="pc-team-bio">An MBA in Sales &amp; Marketing with 20 years of experience, leading sales and product strategy for PVC pipes, electric tapes, MCBs and aluminium wires.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Rajeev Chaudhary, an MBA in Sales &amp; Marketing with 20 years of experience, leads the sales and product strategy for PVC pipes, electric tapes, MCBs, and aluminum wires. He develops product plans, analyzes markets and competitors, and coordinates with R&amp;D, operations, procurement, and quality teams to ensure strong product performance.</p>
+                                        <p>Rajeev drives sales forecasting, target achievement, distributor management, and territory expansion while formulating pricing and sales policies. He supports the sales team through training and performance reviews, develops marketing tools, and tracks key product metrics to provide strategic insights to senior management.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 13 — Arvind Kumar Singh -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Arvind Kumar Singh">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Arvind Kumar Singh</h6>
+                                        <span class="pc-team-role">Vice President &mdash; Production</span>
+                                        <p class="pc-team-bio">Over 25 years of experience overseeing technical operations &mdash; production planning, quality control and process improvement aligned with 5S standards.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Arvind Singh, with a B.Sc. in Biology, a Diploma in Electrical Engineering, and over 25 years of experience, oversees technical operations with a focus on production planning, quality control, and process improvement.</p>
+                                        <p>He manages raw material planning, daily production monitoring, maintenance coordination, and cross-departmental workflow to ensure timely deliveries and smooth operations. Arvind also supports new part development, handles customer-related corrective actions, and maintains a safe, well-organized plant environment aligned with 5S standards.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 14 — Lalit Kumar -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Lalit Kumar">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Lalit Kumar</h6>
+                                        <span class="pc-team-role">General Manager &mdash; Production</span>
+                                        <p class="pc-team-bio">A B.Tech in Electrical &amp; Electronic Engineering with 20 years of experience, overseeing end-to-end production of all cable types and key manufacturing machinery.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Lalit Kumar, a B.Tech graduate in Electrical and Electronic Engineering with 20 years of experience, oversees end-to-end production of all cable types, including house wire, submersible flat cables, control cables, and other specialized products.</p>
+                                        <p>He manages the operation and maintenance of key manufacturing machinery such as RBD, stranding, extruders, drum twisters, armouring lines, steel tape armouring, and rewinding systems. Lalit ensures effective shop-floor implementation through operators, drives ISO 9001/14001/18001 compliance, and upholds stringent safety practices.</p>
+                                        <p>He is responsible for delivering production outputs with the required quality and quantity, aligned with approved sales orders, while efficiently managing workforce deployment, machine scheduling, and periodic production targets.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                            <!-- 15 — Sudhir Kumar -->
+                            <div class="col-lg-4 col-md-6 sm-mb30">
+                                <div class="pc-team-card" data-ui-animate data-delay="0.1">
+                                    <div class="pc-team-photo">
+                                        <img src="assets/imgs/team-dummy-imagee.jpg" alt="Sudhir Kumar">
+                                    </div>
+                                    <div class="pc-team-body">
+                                        <h6>Sudhir Kumar</h6>
+                                        <span class="pc-team-role">Manager &mdash; Production</span>
+                                        <p class="pc-team-bio">B.Sc. and PGD-PPT with over 10 years of experience, Sudhir oversees the manufacturing of PVC pipes and compounds, ensuring daily, weekly and monthly targets are consistently met.</p>
+                                        <button type="button" class="pc-team-readmore">Read Full Bio <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                                    </div>
+                                    <div class="pc-team-fullbio">
+                                        <p>Sudhir Kumar, B.Sc. and PGD-PPT, brings over 10 years of experience in production management. As Manager Production, he oversees the manufacturing of PVC pipes and compounds, ensuring daily, weekly, and monthly targets are consistently met.</p>
+                                        <p>He monitors critical quality parameters such as dimensional accuracy, impact strength, pressure rating, and surface finish, while coordinating closely with sales, quality, and logistics teams to align production with demand. Sudhir is responsible for optimizing machine utilization, minimizing wastage, and implementing process improvements.</p>
+                                        <p>He leads and trains production operators and shift supervisors, ensures timely preventive maintenance, and maintains compliance with ISO and safety standards. His focus on efficiency, quality, and on-time delivery has been instrumental in driving operational excellence and ensuring high customer satisfaction.</p>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                        </div>
+                    </div>
+                </section>
+ 
+ 
+                <!-- ============ FULL-BIO MODAL (single instance for all members) ============ -->
+                <div class="pc-team-modal" id="pc-team-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pc-team-modal-name">
+                    <div class="pc-team-modal-card">
+                        <button type="button" class="pc-team-modal-close" aria-label="Close">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="pc-team-modal-head">
+                            <div class="pc-team-modal-photo">
+                                <img src="" alt="">
+                            </div>
+                            <div>
+                                <h3 class="pc-team-modal-name" id="pc-team-modal-name"></h3>
+                                <span class="pc-team-modal-role"></span>
+                            </div>
+                        </div>
+                        <div class="pc-team-modal-body"></div>
+                    </div>
+                </div>
+ 
+                <!-- ============ MODAL CONTROLLER (vanilla JS, no library) ============ -->
+                <!-- <script>
+                (function () {
+                  var modal = document.getElementById('pc-team-modal');
+                  if (!modal) return;
+                  var nameEl  = modal.querySelector('.pc-team-modal-name');
+                  var roleEl  = modal.querySelector('.pc-team-modal-role');
+                  var photoEl = modal.querySelector('.pc-team-modal-photo img');
+                  var bodyEl  = modal.querySelector('.pc-team-modal-body');
+                  var closeBtn= modal.querySelector('.pc-team-modal-close');
+ 
+                  function openFor(card) {
+                    var name = (card.querySelector('.pc-team-body h6') || {}).textContent || '';
+                    var role = (card.querySelector('.pc-team-role')      || {}).textContent || '';
+                    var img  = card.querySelector('.pc-team-photo img');
+                    var full = card.querySelector('.pc-team-fullbio');
+                    nameEl.textContent = name.trim();
+                    roleEl.textContent = role.trim();
+                    if (img) {
+                      photoEl.setAttribute('src', img.getAttribute('src') || '');
+                      photoEl.setAttribute('alt', name.trim());
+                    }
+                    bodyEl.innerHTML = full ? full.innerHTML : '';
+                    modal.classList.add('is-open');
+                    modal.setAttribute('aria-hidden', 'false');
+                    document.body.classList.add('pc-modal-open');
+                  }
+                  function closeModal() {
+                    modal.classList.remove('is-open');
+                    modal.setAttribute('aria-hidden', 'true');
+                    document.body.classList.remove('pc-modal-open');
+                  }
+ 
+                  document.querySelectorAll('.pc-team-readmore').forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                      var card = btn.closest('.pc-team-card');
+                      if (card) openFor(card);
+                    });
+                  });
+                  closeBtn.addEventListener('click', closeModal);
+                  modal.addEventListener('click', function (e) {
+                    if (e.target === modal) closeModal();
+                  });
+                  document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+                  });
+                })();
+                </script>
+  -->
+<!-- ============ END INNER SECTIONS ============ -->
+
+<section class="plaza-cta-section pt-0 pb-0">
+    <div class="shape-bottom-left w-250px " data-speed="0.7" data-lag="0">
+        <!-- opacity-5 -->
+        <!-- <img src="assets/imgs/mshap3.png" alt=""> -->
+        <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
+    </div>
+    <div class="cta-inner o-hidden position-relative">
+        <div class="pc-container">
+            <div class="cta-wrapper">
+
+                <!-- Left: headline + CTA button + tagline -->
+                <div class="cta-content-left">
+                    <h2 class="cta-heading">
+                        Looking for Reliable<br>Electrical Solutions?
+                    </h2>
+                    <div class="cta-actions">
+                        <a href="#!" class="butn-arrow-white">
+                            <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
+                            <span class="arrow-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                            </span>
+                        </a>
+                        <span class="cta-tagline">[ Est. 1975 — Pan India ]</span>
+                    </div>
+                </div>
+
+                <!-- Right: description text -->
+                <div class="cta-content-right">
+                    <p class="cta-description">
+                        [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+ 
+     <footer class="pc-footer">
+  <div class="pc-footer__card">
+    <div class="pc-container">
+
+      <!-- description replacing the big title -->
+      <div class="pc-description">
+        <p>Starting from a fledgling organization 35 years ago, R K Cable — now known as Plaza Cables — has established itself as a major player in India's cable &amp; wire industry, delivering certified, high-performance electrical solutions trusted by homes, industries, and government institutions nationwide.</p>
+      </div>
+
+      <!-- 3-column grid -->
+      <div class="pc-grid">
+
+        <!-- col 1: address → phone → email -->
+        <div class="pc-col-1">
+          <div class="pc-addr-block">
+            <span class="pc-label">Address</span>
+            <p class="pc-addr">A-74, Okhla Industrial Area<br>Phase-II, New Delhi – 110020<br>India</p>
+          </div>
+
+          <div class="pc-contact-group">
+            <span class="pc-label">Contact</span>
+            <p class="pc-tel-toll"><span>Toll Free</span>18001218050</p>
+            <p class="pc-tel-num">+91 11 66369666</p>
+          </div>
+
+          <div class="pc-email-link">
+            <span class="pc-label">Email</span>
+            <a href="mailto:info@plazacables.com">info@plazacables.com</a>
+          </div>
+        </div>
+
+        <!-- col 2: brand title centered in grid -->
+        <div class="pc-col-2">
+          <div class="pc-connect-title" data-text="Plaza Cables" id="pcTitle">Plaza Cables<sup class="pc-reg">®</sup></div>
+        </div>
+
+        <!-- col 3: quick links -->
+        <div class="pc-col-3">
+          <span class="pc-label">Quick Links</span>
+          <div class="pc-links">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="news.html">News &amp; Media</a></li>
+              <li><a href="network.html">Our Network</a></li>
+              <li><a href="csr.html">CSR Activities</a></li>
+            </ul>
+            <ul>
+                 <li><a href="team.html">Team</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+             
+            </ul>
+          </div>
+
+          <div style="margin-top:32px;">
+            <span class="pc-label">Legal</span>
+            <div class="pc-links" style="grid-template-columns:1fr;">
+              <ul>
+                <li><a href="#!">Privacy Policy</a></li>
+                <li><a href="#!">Terms of Use</a></li>
+                <li><a href="#!">Disclaimer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pc-grid -->
+
+      <!-- copyright bar -->
+      <div class="pc-copy">
+        <span class="pc-copy__text">Plaza © 2026</span>
+        <ul class="pc-tags">
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1"> Triple Layer Insulated 3D wire </span><span class="pc-tag__t2"> Triple Layer Insulated 3D wire </span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Flame Retardant Flexible Cable</span><span class="pc-tag__t2">Flame Retardant Flexible Cable</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Telephone Cables</span><span class="pc-tag__t2">Telephone Cables</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Solar Cables</span><span class="pc-tag__t2">Solar Cables</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+        <span class="pc-copy__text pc-copy__since">[ Since 1975 ]</span>
+      </div>
+
+    </div><!-- /pc-container -->
+
+    <button class="pc-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M9 4L4 9M9 4L14 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="pc-footer__bottom-strip"></div>
+  </div>
+</footer>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <!-- plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/smoother-script.js"></script>
+    <script src="assets/js/springer.min.js"></script>
+    <!-- custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- <script>
+        $(function () {
+            var width = $(window).width();
+            if (width > 991) {
+                gsap.registerPlugin(ScrollTrigger);
+                let sections = gsap.utils.toArray(".hr-container .item-panel");
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hr-container",
+                        start: "center center",
+                        end: "bottom bottom",
+                        pin: true,
+                        scrub: 1,
+                        end: () => "+=" + document.querySelector(".hr-container").offsetWidth
+                    }
+                });
+            }
+        });
+    </script> -->
+    <script>
+        // Industries Swiper
+var industriesSwiper = new Swiper('.industries-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay:true,
+    navigation: {
+        nextEl: '.industries-next',
+        prevEl: '.industries-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        }
+    }
+});
+    </script>
+    <script>
+/* ============================================================
+   MAGNETIC LETTER EFFECT
+   Each letter scales vertically + lifts up based on how close
+   the cursor's X position is to that letter — peak under the
+   pointer, smoothly falling off to the sides (Gaussian).
+   Mirrors the original: scale(1, up to 1.6), translateY(up to -24%).
+   ============================================================ */
+(function () {
+  const title = document.querySelector('.pc-connect-title');
+  if (!title) return;
+ 
+  // --- build the word/letter spans from data-text ---
+  const text = title.dataset.text || title.textContent;
+  title.textContent = '';
+  text.split(' ').forEach((word, wi, arr) => {
+    const w = document.createElement('span');
+    w.className = 'pc-word';
+    [...word].forEach(ch => {
+      const l = document.createElement('span');
+      l.className = 'pc-letter';
+      l.textContent = ch;
+      w.appendChild(l);
+    });
+    title.appendChild(w);
+    if (wi < arr.length - 1) title.appendChild(document.createTextNode(' '));
+  });
+  const sup = document.createElement('sup');
+  sup.className = 'pc-reg';
+  sup.textContent = '®';
+  title.appendChild(sup);
+ 
+  const letters = Array.from(title.querySelectorAll('.pc-letter'));
+ 
+  // tuning — matches the reference dev-tools values
+  const MAX_SCALE = 0.2;   // extra scaleY at the peak  -> max 1.6
+  const MAX_LIFT  = 24;    // % upward translate at peak -> -24%
+  const SIGMA     = 0.95;  // spread of the wave (in letter-widths)
+ 
+  let pointerX = null, raf = null;
+ 
+  function render() {
+    raf = null;
+    if (pointerX === null) return;
+    for (const l of letters) {
+      const r = l.getBoundingClientRect();
+      const center = r.left + r.width / 2;
+      // distance in "letter widths" (scaleY/translateY don't change width, so this is stable)
+      const d = (pointerX - center) / Math.max(r.width, 1);
+      const intensity = Math.exp(-(d * d) / (2 * SIGMA * SIGMA));
+      const scaleY = 1 + MAX_SCALE * intensity;
+      const liftY  = -MAX_LIFT * intensity;
+      l.style.transform = `translate3d(0, ${liftY.toFixed(2)}%, 0) scale(1, ${scaleY.toFixed(3)})`;
+    }
+  }
+ 
+  function schedule() { if (raf === null) raf = requestAnimationFrame(render); }
+ 
+  title.addEventListener('pointermove', (e) => { pointerX = e.clientX; schedule(); });
+  title.addEventListener('pointerleave', () => {
+    pointerX = null;
+    for (const l of letters) l.style.transform = 'translate3d(0,0,0) scale(1,1)';
+  });
+})();
+</script>
+ <script>
+(function () {
+  function init() {
+    var modal = document.getElementById('pc-team-modal');
+    if (!modal) return;
+ 
+    // ── FIX 1 ──────────────────────────────────────────────────
+    // ScrollSmoother applies transform to #smooth-content, which
+    // breaks position:fixed for any descendant. Move the modal to
+    // <body> so it becomes a real viewport-fixed overlay.
+    if (modal.parentElement !== document.body) {
+      document.body.appendChild(modal);
+    }
+ 
+    var nameEl   = modal.querySelector('.pc-team-modal-name');
+    var roleEl   = modal.querySelector('.pc-team-modal-role');
+    var photoEl  = modal.querySelector('.pc-team-modal-photo img');
+    var bodyEl   = modal.querySelector('.pc-team-modal-body');
+    var closeBtn = modal.querySelector('.pc-team-modal-close');
+ 
+    // ── FIX 2 ──────────────────────────────────────────────────
+    // Pause/resume ScrollSmoother around modal open/close so the
+    // page can't smoothly scroll behind the overlay. The body
+    // class `pc-modal-open` (overflow:hidden) is kept as belt-
+    // and-braces, but the smoother is what actually controls
+    // scrolling on this template.
+    function getSmoother() {
+      return (window.ScrollSmoother && typeof ScrollSmoother.get === 'function')
+        ? ScrollSmoother.get()
+        : null;
+    }
+ 
+    function openFor(card) {
+      var name = (card.querySelector('.pc-team-body h6') || {}).textContent || '';
+      var role = (card.querySelector('.pc-team-role')    || {}).textContent || '';
+      var img  = card.querySelector('.pc-team-photo img');
+      var full = card.querySelector('.pc-team-fullbio');
+ 
+      nameEl.textContent = name.trim();
+      roleEl.textContent = role.trim();
+      if (img) {
+        photoEl.setAttribute('src', img.getAttribute('src') || '');
+        photoEl.setAttribute('alt', name.trim());
+      }
+      bodyEl.innerHTML = full ? full.innerHTML : '';
+ 
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('pc-modal-open');
+ 
+      var s = getSmoother();
+      if (s) s.paused(true);
+    }
+ 
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('pc-modal-open');
+ 
+      var s = getSmoother();
+      if (s) s.paused(false);
+    }
+ 
+    document.querySelectorAll('.pc-team-readmore').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var card = btn.closest('.pc-team-card');
+        if (card) openFor(card);
+      });
+    });
+ 
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+  }
+ 
+  // Run after the DOM is fully built so all .pc-team-card and
+  // .pc-team-readmore elements are in place when we wire them up.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+ 
+</body>
+</html>

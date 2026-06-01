@@ -1,0 +1,2539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Plaza Cables, Wires, Electrical Solutions, PCG, Action Wires">
+    <meta name="description" content="Plaza Group - Advanced Wires, Cables & Electrical Solutions You Can Trust">
+    <meta name="author" content="Plaza Group">
+    <title>Plaza Cables – Powering Safer Connections</title>
+    <link rel="shortcut icon" href="assets/imgs/favicon.png">
+    <link rel="apple-touch-icon" href="assets/imgs/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* ── Certifications Section ─────────────────────────── */
+        .cert-section { padding: 120px 0; }
+        .cert-brand-label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cert-brand-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+        }
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .cert-card {
+            border-radius: 20px;
+            padding: 28px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 130px;
+            gap: 14px;
+            transition: transform 0.3s ease;
+        }
+        body.light .cert-card { background: #f4f4f4; }
+        body:not(.light) .cert-card { background: #1c1c1c; }
+        .cert-card:hover { transform: translateY(-4px); }
+        .cert-card .cert-icon {
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 12px;
+            background: #DDF160;
+            color: #111;
+            font-size: 22px;
+        }
+        .cert-card .cert-name { font-size: 13px; font-weight: 600; }
+        .cert-card .cert-sub { font-size: 11px; opacity: 0.55; }
+
+        /* ── Clients / Trusted By Section ───────────────────── */
+        .clients-section { padding: 120px 0; }
+        .clients-marquee-wrap { overflow: hidden; width: 100%; }
+        .clients-marquee-track {
+            display: flex;
+            gap: 0;
+            animation: marqueeScroll 30s linear infinite;
+            width: max-content;
+        }
+        .clients-marquee-track:hover { animation-play-state: paused; }
+        @keyframes marqueeScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .client-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            margin: 8px 10px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.3s;
+        }
+        body.light .client-pill { background: #f0f0f0; color: #1a1a1a; }
+        body:not(.light) .client-pill { background: #1c1c1c; color: #e0e0e0; }
+        .client-pill .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: #DDF160;
+            flex-shrink: 0;
+        }
+        .client-category-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+        }
+        .clients-row-wrap { margin-bottom: 30px; }
+
+        /* ── CTA Section ────────────────────────────────────── */
+        /* .plaza-cta-section { padding: 120px 0 0; } */
+        .plaza-cta-inner {
+            border-radius: 40px;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        body.light  .plaza-cta-inner { background: #111; color: #fff; }
+        body:not(.light) .plaza-cta-inner { background: #1c1c1c; color: #fff; }
+        .plaza-cta-inner::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 400px; height: 400px;
+            border-radius: 50%;
+            background: #DDF160;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .plaza-cta-inner h2 { font-size: clamp(32px, 5vw, 60px); font-weight: 700; color: #fff; margin-bottom: 20px; }
+        .plaza-cta-inner p  { opacity: 0.7; max-width: 560px; line-height: 1.7; }
+        .cta-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+        .cta-btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            background: #DDF160;
+            color: #111 !important;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(221,241,96,0.35); }
+        .cta-btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            color: #fff !important;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .cta-btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+
+        /* ── Industries grid (Why Choose + Industries) ──────── */
+        .industries-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; margin-top: 50px; }
+        @media(min-width:992px){ .industries-grid { grid-template-columns: repeat(4,1fr); } }
+        .industry-card {
+            border-radius: 24px;
+            padding: 36px 28px;
+            display: flex; flex-direction: column; gap: 16px;
+        }
+        body.light .industry-card { background: #f4f4f4; }
+        body:not(.light) .industry-card { background: #1c1c1c; }
+        .industry-card .ic-icon {
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            background: #DDF160;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: #111;
+        }
+        .industry-card h6 { font-size: 16px; font-weight: 700; margin: 0; }
+        .industry-card p  { font-size: 14px; opacity: 0.6; margin: 0; }
+
+        /* misc tweaks */
+        .bord-top { border-top: 1px solid rgba(255,255,255,0.08); }
+        body.light .bord-top { border-top: 1px solid rgba(0,0,0,0.08); }
+        .sec-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.5;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sec-label::before { content:''; width:20px; height:2px; background:#DDF160; border-radius:2px; }
+
+        /* ── rv-about: scroll-reveal image section ───────────── */
+        #rv-about-panel {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            /* background: #eae4df; */
+        }
+        #rv-img-cover {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            will-change: clip-path, transform;
+            overflow: hidden;
+        }
+        #rv-img-cover img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            will-change: transform;
+        }
+        #rv-text-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        #rv-text-overlay.rv-visible { opacity: 1; }
+        .rv-title-small {
+            font-family: var(--font-primary, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+            font-size: clamp(1rem, 2.361vw, 45px);
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            line-height: 1.2;
+        }
+        .rv-title-jumbo {
+            font-family: var(--font-primary, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+            font-size: clamp(60px, 11.806vw, 220px);
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            line-height: 1;
+        }
+        .rv-line { display: block; overflow: hidden; text-align: center; }
+        .rv-word {
+            display: inline-block;
+            transform: translateY(100%);
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .rv-word.rv-in  { transform: translateY(0%); }
+        .rv-word--1     { transition-delay: 0.00s; }
+        .rv-word--2     { transition-delay: 0.07s; }
+        .rv-word--3     { transition-delay: 0.14s; }
+        .rv-word--4     { transition-delay: 0.21s; }
+        .rv-word--5     { transition-delay: 0.28s; }
+        .rv-jumbo-word  { transition-delay: 0.10s; }
+    </style>
+</head>
+
+<body class="digital-agency light">
+
+    <!-- Loader -->
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+        <div class="loader-wrap-heading">
+    <div class="load-text">
+        <span>P</span><span>l</span><span>a</span><span>z</span><span>a</span><span>C</span><span>a</span><span>b</span><span>l</span><span>e</span><span>s</span>
+    </div>
+</div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="blur-div"></div>
+
+    <!-- Progress scroll -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+   <!-- ==================== Navbar ==================== -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+            <a class="logo w-100px" href="index.html">
+                <!-- <img src="assets/imgs/logo-color.png" alt="Plaza Cables Logo"> -->
+                <img src="assets/imgs/logo.png" alt="Plaza Cables Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon-bar"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><span class="rolling-text">Home</span></a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#!"><span class="rolling-text">About Us</span></a></li> -->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">About Us</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">Plaza Group</a></li>
+                            <li><a class="dropdown-item" href="team.html">Our Leadership</a></li>
+                            <li><a class="dropdown-item" href="awards.html">Awards</a></li>
+                            <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                            <li><a class="dropdown-item" href="sustainability.html">Sustainability</a></li>
+                            <li><a class="dropdown-item" href="infrastructure.html">Infrastructure</a></li>
+                            <li><a class="dropdown-item" href="csr.html">CSR</a></li>
+                            <li><a class="dropdown-item" href="research.html">Research & Development</a></li>
+                            <li><a class="dropdown-item" href="network.html">Sales & Distributors Network</a></li>
+                            <li><a class="dropdown-item" href="events.html">Events</a></li>
+                            <li><a class="dropdown-item" href="casestudy.html">Case Studies</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html"><span class="rolling-text">Products</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="investor-relation.html"><span class="rolling-text">Investor Relation</span></a></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">Investor Relation</span></a>
+                           <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#!">Financial Performance</a></li>
+                            <li><a class="dropdown-item" href="#!">Corporate Governance</a></li>
+                            <li><a class="dropdown-item" href="#!">Public Issue</a></li>
+                            <li><a class="dropdown-item" href="#!">Shareholding Pattern</a></li>
+                            <li><a class="dropdown-item" href="#!">Policies</a></li>
+                            <li><a class="dropdown-item" href="#!">Committee of Board</a></li>
+                            <li><a class="dropdown-item" href="#!">Advertisement</a></li>
+                            <li><a class="dropdown-item" href="#!">Annual Return</a></li>
+                            <li><a class="dropdown-item" href="#!">Annual Report</a></li>
+                            <li><a class="dropdown-item" href="#!">Other Documents</a></li>
+                            <li><a class="dropdown-item" href="#!">Investor Grievances Contact</a></li>
+                            <li><a class="dropdown-item" href="#!">Group Companies</a></li>
+                            <li><a class="dropdown-item" href="#!">Previous Names of the Company</a></li>
+                        </ul>
+                    </li> -->
+               
+                    <li class="nav-item"><a class="nav-link" href="news.html"><span class="rolling-text">News</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="careers.html"><span class="rolling-text">Careers</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><span class="rolling-text">Contact Us</span></a></li>
+                </ul>
+            </div>
+            <a href="contact.html" class="butn-arrow">
+                <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
+                <span class="arrow-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+    <!-- ==================== End Navbar ==================== -->
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main class="o-hidden">
+
+                <!-- ==================== Hero ==================== -->
+                <header class="hero-style1 position-relative o-hidden">
+                    <div class="bg-img" data-background="assets/imgs/hero-banner-plaza.webp"></div>
+                    <div class="container position-relative z-index-2">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="mb-80px md-mb50 text-white">
+                                    <h1 class="fs-75">Powering Safer Connections for <span class="opacity-5 underline d-inline">Modern Infrastructure</span>.</h1>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 d-flex align-items-end md-order-1">
+                                    <div class="tags md-mb50">
+                                        <a href="#!">House Wires</a>
+                                        <a href="#!">LT Cables</a>
+                                        <a href="#!">PVC Conduits</a>
+                                        <a href="#!">Electrical Accessories</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex justify-content-center md-order-2">
+                                    <div class="circle-button">
+                                        <div class="rotate-circle fs-24 text-uppercase">
+                                            <svg class="textcircle" viewBox="0 0 500 500">
+                                                <defs>
+                                                    <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
+                                                </defs>
+                                                <text>
+                                                    <textPath xlink:href="#textcircle" textLength="900">Safety - Quality - Reliability -</textPath>
+                                                </text>
+                                            </svg>
+                                        </div>
+                                        <div class="icon text-align-center">
+                                            <!-- <span class="w-80px"><img src="assets/imgs/shape1.png" alt=""></span> -->
+                                            <span class="w-100px"><img src="assets/imgs/electric-cable.png" alt=""></span>
+                                            <!-- <span class="w-100px"><img src="assets/imgs/hosePipeHeater3.png" alt=""></span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 md-order-1 md-mb80">
+                                    <p class="fs-18">Plaza delivers high-performance wires, cables, and electrical solutions designed for safety, durability, and efficient power distribution. Built with advanced technology and strict quality standards, our products support reliable connectivity across residential, commercial, and industrial environments.</p>
+                                    <a href="#!" class="butn-arrow mt-30px">
+                                        <span class="text-uppercase fs-14 fw-500">Explore Products</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- ==================== End Hero ==================== -->
+
+
+                <!-- ==================== About Plaza ==================== -->
+                <section class="intro-style1 pt-200px pb-200px">
+                       <div class="shape-top-right w-200px" data-speed="0.7" data-lag="0">
+                        <!-- <img src="assets/imgs/mshap1.png" alt="">   opacity-1-->
+                        <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
+                    </div>
+                    <div class="container">
+                        <div class=" mb-80px" data-ui-animate data-delay="0.2">
+                            <!-- <h6 class="bord mb-50px text-uppercase">About Plaza</h6> -->
+                             <h6 class="pc-eyebrow mb-50px text-uppercase">About Plaza</h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4" data-ui-animate data-delay="0.3">
+                                <div>
+                                    <div class="fit-vid fit-img border-radius-15px">
+                                        <video loop muted autoplay class="bgvid">
+                                            <!-- <source src="assets/imgs/w8.mp4" type="video/mp4"> -->
+                                            <source src="assets/imgs/about-plaza.MP4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                <div class="hero-style2">
+                        <div class="row sm-marg">
+                   
+                            <div class=" right-column">
+                          
+                                <div class="awards mt-10px">
+                                    <div class="swiper awards-swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                        <div class="swiper-wrapper" id="swiper-wrapper-c65102422de710d4a" aria-live="off" style="transform: translate3d(-804px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="width: 171px; margin-right: 30px;">
+                                                <div class="item">
+                                                    <div class="img">
+                                                        <!-- <img src="assets/imgs/hero/awards/3.svg" alt=""> -->
+                                                        <img src="assets/imgs/logo-color.png" alt="">
+                                                    </div>
+                                                    <span>95% job success <br> on upwork</span>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="width: 171px; margin-right: 30px;">
+                                                <div class="item">
+                                                    <div class="img">
+                                                          <img src="assets/imgs/logo-color.png" alt="">
+                                                    </div>
+                                                    <span>Lorem <br> ipsum dit</span>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 3" style="width: 171px; margin-right: 30px;">
+                                                <div class="item">
+                                                    <div class="img">
+                                                       <img src="assets/imgs/logo-color.png" alt="">
+                                                    </div>
+                                                     <span>Lorem <br> ipsum dit</span>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="2" role="group" aria-label="3 / 3" style="width: 171px; margin-right: 30px;">
+                                                <div class="item">
+                                                    <div class="img">
+                                                        <img src="assets/imgs/logo-color.png" alt="">
+                                                    </div>
+                                                  <span>Lorem <br> ipsum dit</span>
+                                                </div>
+                                            </div>
+                                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 3" style="width: 171px; margin-right: 30px;">
+                                                <div class="item">
+                                                    <div class="img">
+                                                        <img src="assets/imgs/logo-color.png" alt="">
+                                                    </div>
+                                                     <span>Lorem <br> ipsum dit</span>
+                                                </div>
+                                            </div></div>
+                                        <div class="controls">
+                                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-c65102422de710d4a">
+                                                <i class="fa-solid fa-chevron-left"></i>
+                                            </div>
+                                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-c65102422de710d4a">
+                                                <i class="fa-solid fa-chevron-right"></i>
+                                            </div>
+                                        </div>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8" data-ui-animate data-delay="0.4">
+                                <div>
+                                    <h2 class="text-indent">Delivering Trusted Electrical Solutions Across India.</h2>
+                                     <!-- style="opacity:0.7; max-width:620px; line-height:1.8;" -->
+                                    <p class="mt-30px fs-18">With decades of experience in the electrical industry, the Plaza Group delivers safe, reliable, and high-performance electrical solutions for homes, businesses, and infrastructure projects across India. Established in 1975, Plaza Wires is one of India's trusted brands for house wires, LT cables, and electrical products — serving residential, industrial, and infrastructure sectors with a strong focus on quality and innovation.</p>
+                                </div>
+                                <div class="row mt-50px">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="mt-50px">
+                                            <h6 class="text-uppercase fs-14 pb-15px mb-30px line-bottom border-color-transparent-white-light">Established Since</h6>
+                                            <h2 class="fs-90 fw-400 mb-15px">1975</h2>
+                                            <p>Decades of trusted electrical expertise across India</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 offset-lg-2 col-md-6">
+                                        <div class="mt-50px">
+                                            <h6 class="text-uppercase fs-14 pb-15px mb-30px line-bottom border-color-transparent-white-light">Active Brands</h6>
+                                            <h2 class="fs-90 fw-400 mb-15px">3+</h2>
+                                            <p>Plaza Wires, PCG, and Action Wires under one group</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-40px">
+                                    <a href="#!" class="butn-arrow-white">
+                                        <span class="text-uppercase fs-14 fw-500">View Details – Plaza Group</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+                <!-- ==================== End About ==================== -->
+
+
+                <!-- ==================== Our Products ==================== -->
+                <section class="serv-style2 pt-200px pb-200px">
+                    <div class="container pt-100px">
+                        <div class="sec-head bord mb-80px">
+                           
+                            <!-- align-items-center -->
+                            <div class="row align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="md-mb15">
+                                         <h6 class="pc-eyebrow">Our Products</h6>
+                                        <h2 class="fw-500">Reliable Electrical Solutions for Every Need.</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 offset-lg-2">
+                                    <p>Our diverse product portfolio delivers safety, durability, and performance across residential, commercial, and industrial applications — powering modern infrastructure across India.</p>
+                                     <a href="#!" class="butn-more d-flex align-items-center">
+                                        <span class="text-uppercase fs-14 fw-500">View All Products</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cardStacking">
+                            <div class="cardStacking__cards row">
+
+                                <!-- Plaza Wires -->
+                                <div class="stackCard col-lg-12 col-md-6 mb-20px">
+                                    <div class="item row sub-bg-white border-radius-30px">
+                                        <div class="col-lg-5">
+                                            <div class="cont h-100 v-align-between">
+                                                <div>
+                                                    <h6 class="mb-15px">001</h6>
+                                                    <h2 class="fs-60"><a href="#!">Plaza Wires</a></h2>
+                                                </div>
+                                                <div class="mt-40px">
+                                                    <p>A premium range of high-performance wires and cables designed for safety, durability, and reliable electrical performance — from house wiring to industrial and infrastructure applications.</p>
+                                                    <div class="tags mt-20px">
+                                                        <span>House Wires</span>
+                                                        <span>LT Cables</span>
+                                                        <span>Industrial Cables</span>
+                                                        <span>Infrastructure</span>
+                                                    </div>
+                                                    <a href="#!" class="butn-arrow-white mt-30px">
+                                                        <span class="text-uppercase fs-14 fw-500">View Details</span>
+                                                        <span class="arrow-icon">
+                                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 offset-lg-1 p-0 md-hide">
+                                            <div class="fit-img h-100 ">
+                                                <!-- <img src="assets/imgs/serv/sr1.png" alt="Plaza Wires"> -->
+                                                <!-- <img src="assets/imgs/plaza-web-01.webp" alt="Plaza Wires" class="pz-product-img"> -->
+                                                <img src="assets/imgs/product-plaza-01.webp" alt="Plaza Wires" class="pz-product-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- PCG -->
+                                <div class="stackCard col-lg-12 col-md-6 mb-20px">
+                                    <div class="item row main-colorbg bg-light border-radius-30px">
+                                        <div class="col-lg-5">
+                                            <div class="cont h-100 v-align-between">
+                                                <div>
+                                                    <h6 class="mb-15px">002</h6>
+                                                    <h2 class="fs-60"><a href="#!">PCG</a></h2>
+                                                </div>
+                                                <div class="mt-40px">
+                                                    <p>Durable PVC conduit pipes, casing-n-capping systems, MCBs, insulation tapes, and electrical accessories for safe electrical installations in residential and commercial projects.</p>
+                                                    <div class="tags mt-20px">
+                                                        <span>PVC Conduits</span>
+                                                        <span>MCBs</span>
+                                                        <span>Insulation Tapes</span>
+                                                    </div>
+                                                    <a href="#!" class="butn-arrow mt-30px">
+                                                        <span class="text-uppercase fs-14 fw-500">View Details</span>
+                                                        <span class="arrow-icon">
+                                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 offset-lg-1 p-0 md-hide">
+                                            <div class="fit-img h-100">
+                                                <!-- <img src="assets/imgs/serv/sr4.png" alt="PCG Products"> -->
+                                                    <img src="assets/imgs/product-plaza-02.png" alt="PCG Products" class="pz-product-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Action Wires -->
+                                <div class="stackCard col-lg-12 col-md-6">
+                                    <div class="item row bg-light border-radius-30px">
+                                        <div class="col-lg-5">
+                                            <div class="cont h-100 v-align-between">
+                                                <div>
+                                                    <h6 class="mb-15px">003</h6>
+                                                    <h2 class="fs-60"><a href="#!">Action Wires</a></h2>
+                                                </div>
+                                                <div class="mt-40px">
+                                                    <p>Affordable and dependable house wiring solutions for everyday electrical needs — making quality wiring accessible for homes and businesses across Tier-1 and Tier-2 markets.</p>
+                                                    <div class="tags mt-20px">
+                                                        <span>House Wiring</span>
+                                                        <span>Affordable</span>
+                                                        <span>Reliable</span>
+                                                    </div>
+                                                    <a href="#!" class="butn-arrow mt-30px">
+                                                        <span class="text-uppercase fs-14 fw-500">View Details</span>
+                                                        <span class="arrow-icon">
+                                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 offset-lg-1 p-0 md-hide">
+                                            <div class="fit-img h-100">
+                                                <!-- <img src="assets/imgs/serv/sr2.png" alt="Action Wires"> -->
+                                                  <img src="assets/imgs/product-plaza-03.png" alt="Action Wires" class="pz-product-img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==================== End Products ==================== -->
+
+
+                <!-- ==================== Why Choose Plaza (Features) ==================== -->
+                <section class="features pt-200px pb-200px">
+                    <div class="container pt-100px">
+                        <div class="sec-head text-align-center stack-title text-uppercase md-hide">
+                            <h2>why plaza</h2>
+                        </div>
+                          <div class="why-sub-head text-align-center mb-60px" data-ui-animate data-delay="0.1">
+            <h2 class="sec-label1 mb-15px">Built on Quality, Safety & Innovation</h2>
+            <p class="why-desc">Plaza products are designed with precision engineering and strict quality control to ensure safety, durability, and superior performance across every installation.</p>
+        </div>
+                        <!-- <div class="mb-60px">
+                            <p class="sec-label">Built on Quality, Safety &amp; Innovation</p>
+                            <p style="max-width:560px; opacity:0.6; line-height:1.7;">Plaza products are designed with precision engineering and strict quality control to ensure safety, durability, and superior performance across every installation.</p>
+                        </div> -->
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6" data-ui-animate data-delay="0.2">
+                                <div class="item mb-60px">
+                                    <div class="w-60px mb-30px">
+                                        <img src="assets/imgs/serv/1.svg" alt="">
+                                    </div>
+                                    <h6 class="mb-80px">Advanced <br> Manufacturing</h6>
+                                    <p>Modern production facilities with sophisticated testing systems ensure consistent product quality.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 offset-lg-6 col-md-6" data-ui-animate data-delay="0.2">
+                                <div class="item bg-light mt-60px mb-60px">
+                                    <div class="w-60px mb-30px">
+                                        <img src="assets/imgs/serv/2.svg" alt="">
+                                    </div>
+                                    <h6 class="mb-80px">High Safety <br> Standards</h6>
+                                    <p>Products are designed to meet national and international electrical safety requirements.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 offset-lg-5 col-md-6" data-ui-animate data-delay="0.2">
+                                <div class="item mt-60px mb-60px">
+                                    <div class="w-60px mb-30px">
+                                        <img src="assets/imgs/serv/7.svg" alt="">
+                                    </div>
+                                    <h6 class="mb-80px">Reliable <br> Performance</h6>
+                                    <p>Durable construction and premium materials ensure long service life in diverse environments.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 offset-lg-2 col-md-6" data-ui-animate data-delay="0.2">
+                                <div class="item bg-light main-colorbg mt-60px">
+                                    <div class="w-60px mb-30px">
+                                        <img src="assets/imgs/serv/6.svg" alt="">
+                                    </div>
+                                    <h6 class="mb-80px">Wide Product <br> Portfolio</h6>
+                                    <p>Comprehensive range covering house wiring, industrial cables, networking cables, and electrical accessories.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                      
+                    </div>
+                </section>
+                <!-- ==================== End Why Choose ==================== -->
+
+<section class="plz-industries" id="plz-industries">
+  <div class="plz-industries__desktop">
+
+    <!-- Sticky panel — pinned by ScrollTrigger, no custom sticky JS -->
+    <div class="plz-industries__sticky" id="plz-ind-sticky">
+
+      <!-- Background sections -->
+      <div class="plz-industries__sections">
+
+        <!-- Base intro background -->
+        <!-- <div class="plz-industries__section-base">
+          <div class="plz-video plz-video--cover">
+            <video preload="auto" playsinline muted loop poster="assets/imgs/self-closing.jpg">
+              <source src="assets/imgs/self-closing.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plz-industries__intro-center">
+            <div class="plz-industries__intro-title" id="plz-ind-intro-title">
+              Our products power<br>reliable connections<br>across all industries
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Item 0: Construction -->
+        <div class="plz-industries__section-item" data-item="0">
+          <div class="plz-video plz-video--cover">
+            <video preload="auto" playsinline muted loop poster="assets/imgs/industries/construction-poster.jpg">
+              <source src="assets/imgs/construction.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plz-image plz-image--cover">
+           <img src="assets/imgs/plas8-na.png" alt="Solar">
+          </div>
+        </div>
+
+        <!-- Item 1: Residential -->
+        <div class="plz-industries__section-item" data-item="1">
+          <div class="plz-video plz-video--cover">
+            <video preload="auto" playsinline muted loop poster="assets/imgs/industries/residential-poster.jpg">
+              <source src="assets/imgs/construction.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plz-image plz-image--cover">
+            <img src="assets/imgs/plas8-na.png" alt="Solar">
+          </div>
+        </div>
+
+        <!-- Item 2: Industrial -->
+        <div class="plz-industries__section-item" data-item="2">
+          <div class="plz-video plz-video--cover">
+            <video preload="auto" playsinline muted loop poster="assets/imgs/industries/industrial-poster.jpg">
+              <source src="assets/imgs/construction.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plz-image plz-image--cover">
+         <img src="assets/imgs/plas8-na.png" alt="Solar">
+          </div>
+        </div>
+
+        <!-- Item 3: Infrastructure -->
+        <div class="plz-industries__section-item" data-item="3">
+          <div class="plz-video plz-video--cover">
+            <video preload="auto" playsinline muted loop poster="assets/imgs/industries/infrastructure-poster.jpg">
+            <source src="assets/imgs/construction.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plz-image plz-image--cover">
+        <img src="assets/imgs/plas8-na.png" alt="Solar">
+          </div>
+        </div>
+
+        <!-- Item 4: Solar -->
+        <div class="plz-industries__section-item" data-item="4">
+          <div class="plz-video plz-video--cover">
+            <video preload="auto" playsinline muted loop poster="assets/imgs/industries/solar-poster.jpg">
+            <source src="assets/imgs/construction.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plz-image plz-image--cover">
+            <img src="assets/imgs/plas8-na.png" alt="Solar">
+          </div>
+        </div>
+
+      </div><!-- /sections -->
+
+     <!-- Container: tabs bottom-left -->
+<div class="plz-industries__container">
+  <div class="plz-industries__tabs" id="plz-ind-tabs">
+
+    <div class="plz-industries__tab" data-tab="0">
+      <div class="plz-industries__tab-title">Lorem &amp; Ipsum Dolor</div>
+      <div class="plz-industries__tab-preview">
+        <img src="assets/imgs/product.webp" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="plz-industries__tab" data-tab="1">
+      <div class="plz-industries__tab-title">Sit Amet Consectetur</div>
+      <div class="plz-industries__tab-preview">
+        <img src="assets/imgs/product.webp" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="plz-industries__tab" data-tab="2">
+      <div class="plz-industries__tab-title">Adipiscing &amp; Elit Sed</div>
+      <div class="plz-industries__tab-preview">
+        <img src="assets/imgs/product.webp" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="plz-industries__tab" data-tab="3">
+      <div class="plz-industries__tab-title">Eiusmod &amp; Tempor</div>
+      <div class="plz-industries__tab-preview">
+        <img src="assets/imgs/product.webp" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+    <div class="plz-industries__tab" data-tab="4">
+      <div class="plz-industries__tab-title">Incididunt &amp; Labore</div>
+      <div class="plz-industries__tab-preview">
+        <img src="assets/imgs/product.webp" alt="" onerror="this.style.display='none'">
+      </div>
+    </div>
+
+  </div><!-- /tabs -->
+</div><!-- /container -->
+
+<!-- Boxes -->
+<div class="plz-industries__boxes" id="plz-ind-boxes">
+  <div class="plz-industries__boxes-inner" id="plz-ind-boxes-inner">
+
+    <!-- Box 0 -->
+    <div class="plz-industries__box" data-box="0">
+      <div class="plz-industries__box-title">Lorem Ipsum Dolor</div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Consectetur</span>
+        <span class="plz-group-val">Adipiscing Elit</span>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Sed Do</span>
+        <div class="plz-combolabel">
+          <div class="plz-label plz-label--main">Eiusmod Tempor</div>
+          <div class="plz-label plz-label--white">Incididunt / Labore</div>
+        </div>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Ut Labore</span>
+        <span class="plz-group-val">1100 V</span>
+      </div>
+    </div>
+
+    <!-- Box 1 -->
+    <div class="plz-industries__box" data-box="1">
+      <div class="plz-industries__box-title">Dolore Magna Aliqua</div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Ut Enim</span>
+        <span class="plz-group-val">Ad Minim Veniam</span>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Quis</span>
+        <div class="plz-combolabel">
+          <div class="plz-label plz-label--main">Nostrud Exercitation</div>
+          <div class="plz-label plz-label--white">Ullamco Laboris</div>
+        </div>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Application</span>
+        <span class="plz-group-val">Nisi &amp; Aliquip</span>
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="plz-industries__box" data-box="2">
+      <div class="plz-industries__box-title">Consequat Duis Aute</div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Irure</span>
+        <span class="plz-group-val">Dolor Reprehenderit</span>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Voluptate</span>
+        <div class="plz-combolabel">
+          <div class="plz-label plz-label--main">Velit Esse</div>
+          <div class="plz-label plz-label--white">Cillum</div>
+        </div>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Voltage Rating</span>
+        <span class="plz-group-val">Up to 3.3 kV</span>
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="plz-industries__box" data-box="3">
+      <div class="plz-industries__box-title">Fugiat Nulla Pariatur</div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Type</span>
+        <span class="plz-group-val">Excepteur Sint</span>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Occaecat</span>
+        <div class="plz-combolabel">
+          <div class="plz-label plz-label--main">Cupidatat Non</div>
+          <div class="plz-label plz-label--white">Proident Sunt</div>
+        </div>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Application</span>
+        <span class="plz-group-val">Culpa Officia</span>
+      </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="plz-industries__box" data-box="4">
+      <div class="plz-industries__box-title">Deserunt Mollit Anim</div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Conductor</span>
+        <span class="plz-group-val">Id Est Laborum</span>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Insulation</span>
+        <div class="plz-combolabel">
+          <div class="plz-label plz-label--main">Perspiciatis Unde</div>
+          <div class="plz-label plz-label--white">Nemo Enim</div>
+        </div>
+      </div>
+      <div class="plz-industries__box-group">
+        <span class="plz-label plz-label--plain">Voltage Rating</span>
+        <span class="plz-group-val">1.5 kV DC</span>
+      </div>
+    </div>
+
+  </div><!-- /boxes-inner -->
+</div><!-- /boxes -->
+
+      <!-- Dot connector circle -->
+      <div class="plz-industries__dot" id="plz-ind-dot"></div>
+
+      <!-- SVG line -->
+      <svg class="plz-industries__dot-line" id="plz-ind-dot-line" xmlns="http://www.w3.org/2000/svg">
+        <line id="plz-ind-stroke-line" x1="0" y1="0" x2="0" y2="0"/>
+      </svg>
+
+    </div><!-- /sticky -->
+  </div><!-- /desktop -->
+</section>
+
+<!-- ==================== Industries We Serve ==================== -->
+<section class="serv-style5 interactive-sec pt-200px pb-200px">
+    <div class="container">
+        <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.2">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <h6 class="pc-eyebrow">Industries We Serve</h6>
+                    <h2 class="fw-500"> Powering Multiple Industries</h2>
+                </div>
+                <div class="col-lg-5 offset-lg-2">
+                    <p style="margin:0;">Our products are trusted across diverse sectors where reliable electrical connectivity is essential.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Left: image panel that swaps on hover -->
+            <div class="col-lg-4" data-ui-animate data-delay="0.3">
+                <div class="glry-img pt-30px">
+
+                    <div id="tab-1" class="tab-img current border-radius-15px">
+                        <div class="img fit-img h-250px border-radius-10px o-hidden">
+                            <img src="assets/imgs/product.webp" alt="Residential Infrastructure">
+                        </div>
+                        <div class="cont">
+                            <p class="p-15px fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wiring and cable solutions trusted by homeowners and housing developers for safe, reliable electrical installations.</p>
+                            <a href="#!" class="butn-arrow-black butn-full butn-rounded mt-15px">
+                                <span class="text-uppercase fs-14 fw-500">Know More</span>
+                                <span class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="tab-2" class="tab-img">
+                        <div class="img fit-img h-250px border-radius-10px o-hidden">
+                            <img src="assets/imgs/product.webp" alt="Commercial Buildings">
+                        </div>
+                        <div class="cont">
+                            <p class="p-15px fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Reliable cables and conduit systems designed for offices, retail spaces, and large commercial complexes.</p>
+                            <a href="#!" class="butn-arrow-black butn-full butn-rounded mt-15px">
+                                <span class="text-uppercase fs-14 fw-500">Know More</span>
+                                <span class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="tab-3" class="tab-img">
+                        <div class="img fit-img h-250px border-radius-10px o-hidden">
+                            <img src="assets/imgs/product.webp" alt="Industrial Facilities">
+                        </div>
+                        <div class="cont">
+                            <p class="p-15px fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Heavy-duty electrical solutions built for manufacturing plants, factories, and demanding industrial environments.</p>
+                            <a href="#!" class="butn-arrow-black butn-full butn-rounded mt-15px">
+                                <span class="text-uppercase fs-14 fw-500">Know More</span>
+                                <span class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="tab-4" class="tab-img">
+                        <div class="img fit-img h-250px border-radius-10px o-hidden">
+                            <img src="assets/imgs/product.webp" alt="Telecommunications & Networking">
+                        </div>
+                        <div class="cont">
+                            <p class="p-15px fs-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Connectivity products for telecom towers, data centres, and network infrastructure across India.</p>
+                            <a href="#!" class="butn-arrow-black butn-full butn-rounded mt-15px">
+                                <span class="text-uppercase fs-14 fw-500">Know More</span>
+                                <span class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right: large interactive industry titles -->
+            <div class="col-lg-7 offset-lg-1 content" data-ui-animate data-delay="0.4">
+
+                <div class="cluom  current" data-tab="tab-1">
+                    <div class="info">
+                        <h3 class="fs-60">Residential Infrastructure</h3>
+                    </div>
+                </div>
+
+                <div class="cluom " data-tab="tab-2">
+                    <div class="info">
+                        <h3 class="fs-60">Commercial Buildings</h3>
+                    </div>
+                </div>
+
+                <div class="cluom " data-tab="tab-3">
+                    <div class="info">
+                        <h3 class="fs-60">Industrial Facilities</h3>
+                    </div>
+                </div>
+
+                <div class="cluom" data-tab="tab-4">
+                    <div class="info">
+                        <h3 class="fs-60">Telecommunications &amp; Networking</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="serv-style4 pt-200px pb-200px">
+  <div class="container">
+ 
+    <!-- Header -->
+    <!-- <div class="sec-head bord mb-80px">
+      <div class="row align-items-end">
+        <div class="col-lg-4">
+          <h6 class="text-uppercase">Certifications &amp; Standards</h6>
+        </div>
+        <div class="col-lg-8">
+          <h2 class="fs-60 text-uppercase">
+            <span class="opacity-7 d-inline">Certified Quality</span><br>
+            &amp; Trusted Standards.
+          </h2>
+        </div>
+      </div>
+      <div class="row mt-50px cert-desc">
+        <div class="col-lg-6">
+          <p>Plaza Cables Group and PCG products are manufactured under internationally recognized quality, safety, and environmental standards. Our certifications reflect our commitment to delivering reliable electrical solutions while maintaining strict compliance with industry regulations and best practices.</p>
+        </div>
+        <div class="col-lg-6">
+          <p>With globally recognized ISO certifications and BIS-approved product standards, every Plaza and PCG product is designed to ensure safety, durability, and consistent performance across residential, commercial, and industrial installations.</p>
+        </div>
+      </div>
+    </div> -->
+   <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.2">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <h6 class="pc-eyebrow">Certifications & Standards</h6>
+                    <h2 class="fw-500"><span class="opacity-7 d-inline">Certified Quality</span> & Trusted Standards
+</h2>
+                </div>
+                <div class="col-lg-5 offset-lg-2">
+                    <p style="margin:0;">Plaza Cables Group and PCG products are manufactured under internationally recognized quality, safety, and environmental standards. Our certifications reflect our commitment to delivering reliable electrical solutions while maintaining strict compliance with industry regulations and best practices. <br>
+                    With globally recognized ISO certifications and BIS-approved product standards, every Plaza and PCG product is designed to ensure safety, durability, and consistent performance across residential, commercial, and industrial installations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    <!-- GROUP 1 — PCG -->
+    <div class="cert-group">
+      <div class="cert-group-head">
+        <h3 class="fs-28 text-uppercase">PCG Certifications</h3>
+        <span class="cert-line"></span>
+        <span class="cert-count" id="pcg-count"></span>
+      </div>
+      <div class="swiper industries-swiper" data-swiper="pcg">
+        <div class="swiper-wrapper" id="pcg-track"></div>
+      </div>
+      <!-- <div class="d-flex align-items-center gap-10px mt-50px">
+        <div class="butn-arrow pcg-prev" style="cursor:pointer;">
+          <span style="transform:rotate(180deg);display:inline-flex;">
+            <svg viewBox="0 0 24 24" width="30"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"/></svg>
+          </span>
+        </div>
+        <div class="butn-arrow pcg-next" style="cursor:pointer;">
+          <svg viewBox="0 0 24 24" width="30"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"/></svg>
+        </div>
+      </div> -->
+    </div>
+ 
+    <!-- GROUP 2 — PLAZA WIRES & ACTION WIRES -->
+    <div class="cert-group" style="display: none;">
+      <div class="cert-group-head">
+        <h3 class="fs-28 text-uppercase">Plaza Wires &amp; Action Wires Certifications</h3>
+        <span class="cert-line"></span>
+        <span class="cert-count" id="plaza-count"></span>
+      </div>
+      <div class="swiper industries-swiper" data-swiper="plaza">
+        <div class="swiper-wrapper" id="plaza-track"></div>
+      </div>
+      <!-- <div class="d-flex align-items-center gap-10px mt-50px">
+        <div class="butn-arrow plaza-prev" style="cursor:pointer;">
+          <span style="transform:rotate(180deg);display:inline-flex;">
+            <svg viewBox="0 0 24 24" width="30"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"/></svg>
+          </span>
+        </div>
+        <div class="butn-arrow plaza-next" style="cursor:pointer;">
+          <svg viewBox="0 0 24 24" width="30"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"/></svg>
+        </div>
+      </div> -->
+    </div>
+ 
+  </div>
+</section>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.1.14/swiper-bundle.min.js"></script>
+<script>
+/* ============================================================
+   CERTIFICATION DATA
+   Drop your real cert logos into  assets/imgs/certs/  and set the
+   matching file name in `img`. Until the file exists, a placeholder
+   seal is drawn automatically (onerror), so nothing looks broken.
+   These standards are common cable-industry examples — replace with
+   the exact certifications Plaza / PCG / Action Wires actually hold.
+   ============================================================ */
+  const pcgCerts = [
+    { code:'ISO 9001:2015',  seal:'9001',  img:'assets/imgs/certs/iso-9001.png',  desc:'Quality Management System — consistent product quality and process control.' },
+    { code:'ISO 14001:2015', seal:'14001', img:'assets/imgs/certs/iso-14001.png', desc:'Environmental Management — responsible, low-impact manufacturing.' },
+    { code:'ISO 45001:2018', seal:'45001', img:'assets/imgs/certs/iso-45001.png', desc:'Occupational Health & Safety across all our facilities.' },
+    { code:'BIS / ISI Mark', seal:'BIS',   img:'assets/imgs/certs/bis.png',       desc:'Bureau of Indian Standards — products tested to Indian norms.' },
+    { code:'RoHS Compliant', seal:'RoHS',  img:'assets/imgs/certs/rohs.png',      desc:'Free of restricted hazardous substances.' },
+    { code:'CE Marking',     seal:'CE',    img:'assets/imgs/certs/ce.png',        desc:'Conformity with European health, safety & environmental norms.' }
+  ];
+ 
+  const plazaCerts = [
+    { code:'ISO 9001:2015',       seal:'9001', img:'assets/imgs/certs/pw-iso-9001.png', desc:'Quality Management System certified manufacturing.' },
+    { code:'BIS / ISI Certified', seal:'ISI',  img:'assets/imgs/certs/pw-isi.png',      desc:'BIS-approved wires for Indian residential & commercial use.' },
+    { code:'FR / FRLS',           seal:'FR',   img:'assets/imgs/certs/pw-fr.png',       desc:'Fire Retardant / Low Smoke tested for added safety.' },
+    { code:'RoHS Compliant',      seal:'RoHS', img:'assets/imgs/certs/pw-rohs.png',     desc:'Manufactured free of hazardous substances.' },
+    { code:'CPRI Tested',         seal:'CPRI', img:'assets/imgs/certs/pw-cpri.png',     desc:'Verified by the Central Power Research Institute.' }
+  ];
+ 
+  const ARROW = '<span class="arrow-icon">'
+    + '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"/></svg>'
+    + '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"/></svg>'
+    + '</span>';
+ 
+  function slide(item, i){
+    const light = i % 2 === 1 ? ' bg-light' : '';
+    return `<div class="swiper-slide">
+      <div class="item v-align-between${light}">
+        <div class="img">
+          <img src="${item.img}" alt="${item.code} certificate" data-seal="${item.seal}" onerror="pcSeal(this)">
+        </div>
+        <div>
+          <h4 class="mb-30px">${item.code}</h4>
+          <p>${item.desc}</p>
+        </div>
+        <div>
+          <a href="#!" class="butn-more d-flex align-items-center">
+            <span class="text-uppercase fs-14 fw-500">View Certificate</span>${ARROW}
+          </a>
+        </div>
+      </div>
+    </div>`;
+  }
+ 
+  /* placeholder seal — fires only if the real image is missing */
+  function pcSeal(img){
+    img.onerror = null;
+    const s = img.dataset.seal || '';
+    const svg =
+      `<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'>`
+      + `<g fill='none' stroke='%23c9c9c9' stroke-width='3'>`
+      + `<circle cx='120' cy='120' r='104'/><circle cx='120' cy='120' r='90' stroke-dasharray='4 7'/></g>`
+      + `<path d='M92 122l20 20 40-44' fill='none' stroke='%23c9c9c9' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/>`
+      + `<text x='120' y='180' font-family='Archivo,Arial' font-size='30' font-weight='800' fill='%23c9c9c9' text-anchor='middle'>${s}</text>`
+      + `</svg>`;
+    img.src = 'data:image/svg+xml,' + svg.replace(/#/g,'%23').replace(/</g,'%3C').replace(/>/g,'%3E').replace(/"/g,"'");
+  }
+ 
+  /* render + counts */
+  document.getElementById('pcg-track').innerHTML   = pcgCerts.map(slide).join('');
+  document.getElementById('plaza-track').innerHTML = plazaCerts.map(slide).join('');
+  document.getElementById('pcg-count').textContent   = String(pcgCerts.length).padStart(2,'0');
+  document.getElementById('plaza-count').textContent = String(plazaCerts.length).padStart(2,'0');
+ 
+  /* ---- Swiper init (one per group) ---- */
+  const baseCfg = {
+    slidesPerView:1, spaceBetween:20, loop:true,
+    autoplay:{ delay:3500, disableOnInteraction:false },
+    breakpoints:{ 768:{ slidesPerView:2 }, 992:{ slidesPerView:3 } }
+  };
+  new Swiper('[data-swiper="pcg"]', { ...baseCfg,
+    navigation:{ nextEl:'.pcg-next', prevEl:'.pcg-prev' } });
+  new Swiper('[data-swiper="plaza"]', { ...baseCfg,
+    navigation:{ nextEl:'.plaza-next', prevEl:'.plaza-prev' } });
+</script>
+ 
+
+<!-- ==================== End Industries We Serve ==================== -->
+ 
+                <!-- ==================== End Services ==================== -->
+                <!-- ==================== Horizontal Scroll (kept as portfolio visual) ==================== -->
+                <!-- <section class="hr-sec pt-200px">
+                    <div class="hr-container row">
+                        <div class="item-panel col-12 col-md-6 md-mb30">
+                            <div class="fit-img">
+                                <img src="assets/imgs/works/w11.jpg" alt="">
+                                <div class="cont">
+                                    <div class="tags fs-14 text-uppercase"><span>Residential</span><span>Wiring</span></div>
+                                    <a href="#!" class="butn-arrow butn-blur">
+                                        <span class="text-uppercase fs-16 fw-500">Plaza Wires</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-panel col-12 col-md-6 md-mb30">
+                            <div class="fit-img">
+                                <img src="assets/imgs/works/w1.png" alt="">
+                                <div class="cont">
+                                    <div class="tags fs-14 text-uppercase"><span>Conduits</span><span>Accessories</span></div>
+                                    <a href="#!" class="butn-arrow butn-blur">
+                                        <span class="text-uppercase fs-16 fw-500">PCG Products</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-panel col-12 col-md-6 md-mb30">
+                            <div class="fit-img">
+                                <img src="assets/imgs/works/w3.jpg" alt="">
+                                <div class="cont">
+                                    <div class="tags fs-14 text-uppercase"><span>Affordable</span><span>Reliable</span></div>
+                                    <a href="#!" class="butn-arrow butn-blur">
+                                        <span class="text-uppercase fs-16 fw-500">Action Wires</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-panel col-12 col-md-6 md-mb30">
+                            <div class="fit-img">
+                                <img src="assets/imgs/works/wproduct.webp" alt="">
+                                <div class="cont">
+                                    <div class="tags fs-14 text-uppercase"><span>Industrial</span><span>Infrastructure</span></div>
+                                    <a href="#!" class="butn-arrow butn-blur">
+                                        <span class="text-uppercase fs-16 fw-500">Industrial Cables</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-panel col-12 col-md-6 position-relative">
+                            <div class="fit-img">
+                                <video loop muted autoplay class="bgvid">
+                                    <source src="assets/imgs/works/w4.mp4" type="video/mp4">
+                                </video>
+                                <div class="cont">
+                                    <div class="tags fs-14 text-uppercase"><span>Networking</span><span>Telecom</span></div>
+                                    <a href="#!" class="butn-arrow butn-blur">
+                                        <span class="text-uppercase fs-16 fw-500">Networking Cables</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="see-more main-colorbg border-radius-30px d-flex align-items-center justify-content-center text-align-center sm-hide">
+                                <div>
+                                    <h2 class="text-uppercase text-dark"><a href="#!">{ View All Products }</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                <!-- ==================== End Horizontal Scroll ==================== -->
+
+
+                <!-- ==================== Testimonials ==================== -->
+                <section class="testim-style3 pt-200px pb-200px">
+                    <div class="container">
+                        <div class="sec-head tobotm" data-ui-animate data-delay="0.2">
+                            <h2 class="fs-100 fw-300">Customers <br> &amp; Dealers say</h2>
+                        </div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide">
+                                    <div class="item v-align-between h-100 border-radius-30px">
+                                        <div>
+                                            <div class="info d-flex justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
+                                                       <img src="assets/imgs/User-Profile-PNG.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span style="font-size:13px; font-weight:700; opacity:0.5; text-transform:uppercase; letter-spacing:2px;">Dealer</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-30px">
+                                                <h5 class="fw-300">"Plaza Cables consistently delivers strong build quality and reliable performance. Our customers trust the brand for everything from home wiring to large electrical projects."</h5>
+                                            </div>
+                                        </div>
+                                        <div class="mt-80px pl-30px ml-30px line-left border-color-transparent-white-light">
+                                            <h6 class="fs-18">Bindal Electricals</h6>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Dealer</span>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Agra</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item v-align-between h-100 border-radius-30px">
+                                        <div>
+                                            <div class="info d-flex justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
+                                                        <img src="assets/imgs/User-Profile-PNG.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span style="font-size:13px; font-weight:700; opacity:0.5; text-transform:uppercase; letter-spacing:2px;">Dealer</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-30px">
+                                                <h5 class="fw-300">"The quality and reliability of Plaza and PCG products have helped us build strong customer trust. Competitive pricing and timely delivery make them easy to recommend."</h5>
+                                            </div>
+                                        </div>
+                                        <div class="mt-80px pl-30px ml-30px line-left border-color-transparent-white-light">
+                                            <h6 class="fs-18">Luxmi International</h6>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Dealer</span>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Allahabad</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item v-align-between h-100 border-radius-30px">
+                                        <div>
+                                            <div class="info d-flex justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
+                                                     <img src="assets/imgs/User-Profile-PNG.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span style="font-size:13px; font-weight:700; opacity:0.5; text-transform:uppercase; letter-spacing:2px;">Customer</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-30px">
+                                                <h5 class="fw-300">"I used Plaza cables while wiring my new home, and the quality is outstanding. The installation was smooth, and it gives me confidence in the safety of my electrical system."</h5>
+                                            </div>
+                                        </div>
+                                        <div class="mt-80px pl-30px ml-30px line-left border-color-transparent-white-light">
+                                            <h6 class="fs-18">Praveen Kumar</h6>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Customer</span>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Haryana</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="item v-align-between h-100 border-radius-30px">
+                                        <div>
+                                            <div class="info d-flex justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="fit-img h-80px w-80px border-radius-50 o-hidden">
+                                                       <img src="assets/imgs/User-Profile-PNG.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span style="font-size:13px; font-weight:700; opacity:0.5; text-transform:uppercase; letter-spacing:2px;">Customer</span>
+                                                </div>
+                                            </div>
+                                            <div class="mt-30px">
+                                                <h5 class="fw-300">"PCG conduit pipes and electrical accessories offer excellent durability and finish. They are easy to install and always perform reliably in our projects."</h5>
+                                            </div>
+                                        </div>
+                                        <div class="mt-80px pl-30px ml-30px line-left border-color-transparent-white-light">
+                                            <h6 class="fs-18">Govindham Electricals</h6>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Dealer</span>
+                                            <span class="opacity-7 fs-13 d-block mt-5px">Lucknow</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ==================== End Testimonials ==================== -->
+
+                <!-- ==================== Trusted Clients / Partners ==================== -->
+<section class="plaza-partners-section pt-0 pb-130">
+    <div class="container">
+        <div class="row">
+
+            <!-- Top: Label + Heading -->
+            <div class="col-lg-9 col-12">
+                <div class="plaza-about-title-wrap d-flex flex-wrap flex-lg-nowrap align-items-start gap-4">
+                    
+                    <!-- "Our Partners ↗" label -->
+                    <span class="plaza-label-btn">
+                        <span class="plaza-label-inner">
+                            <span class="text-1">Clients</span>
+                        </span>
+                        <i class="plaza-arrow-icon">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z" fill="currentColor"/>
+                            </svg>
+                            <!-- <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.21967 9.40717C-0.0732232 9.70006 -0.0732232 10.1749 0.21967 10.4678C0.512563 10.7607 0.987437 10.7607 1.28033 10.4678L0.21967 9.40717ZM10.6875 0.75C10.6875 0.335786 10.3517 2.97145e-09 9.9375 1.50485e-07L3.1875 -2.70983e-07C2.77329 -2.70983e-07 2.4375 0.335786 2.4375 0.75C2.4375 1.16421 2.77329 1.5 3.1875 1.5H9.1875V7.5C9.1875 7.91421 9.52329 8.25 9.9375 8.25C10.3517 8.25 10.6875 7.91421 10.6875 7.5L10.6875 0.75ZM0.75 9.9375L1.28033 10.4678L10.4678 1.28033L9.9375 0.75L9.40717 0.21967L0.21967 9.40717L0.75 9.9375Z" fill="currentColor"/>
+                            </svg> -->
+                        </i>
+                    </span>
+
+                    <!-- Big heading -->
+                    <h4 class="plaza-section-title">
+                       Trusted by Leading Organizations
+                    </h4>
+                </div>
+            </div>
+
+            <!-- Middle: Ticker marquee (full bleed) -->
+            <div class="col-lg-11 col-12 ms-auto">
+                <div class="plaza-brand-area border-0">
+                    <div class="plaza-ticker-outer">
+                        <ul class="plaza-ticker-list-partners">
+
+                            <!-- Real items -->
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">BSES</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">GAIL</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">MTNL</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Jaypee Group</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Indian Oil</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">ABB</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">NTPC</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">AAI</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">SAIL</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">BHEL</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Delhi Metro</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">NHPC</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Powergrid</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">NBCC</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">CPWD</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">BSNL</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Indian Railways</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">ONGC</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">L&amp;T</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">TATA</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Hindalco</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Ultratech</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">PWD</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">MES India</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">Omaxe</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">NPCIL</span></li>
+                            <li class="plaza-ticker-item-p"><span class="plaza-p-name">DDA</span></li>
+
+                            <!-- Clones for seamless loop -->
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">BSES</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">GAIL</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">MTNL</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Jaypee Group</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Indian Oil</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">ABB</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">NTPC</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">AAI</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">SAIL</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">BHEL</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Delhi Metro</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">NHPC</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Powergrid</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">NBCC</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">CPWD</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">BSNL</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Indian Railways</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">ONGC</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">L&amp;T</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">TATA</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Hindalco</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Ultratech</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">PWD</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">MES India</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">Omaxe</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">NPCIL</span></li>
+                            <li class="plaza-ticker-item-p plaza-ticker-clone"><span class="plaza-p-name">DDA</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom: Flower badge + description -->
+            <div class="col-12">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-60px">
+
+                    <a href="#!" class="butn-arrow-white">
+                                        <span class="text-uppercase fs-14 fw-500">View Details – Plaza Group</span>
+                                        <span class="arrow-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                        </span>
+                                    </a>
+
+                    <!-- Description text -->
+                    <p class="plaza-partner-desc mb-0">
+                    Over the years, Plaza, Action Wires and PCG products have been trusted by some of India’s most respected government institutions, infrastructure developers, and industrial organizations. Our commitment to quality, safety, and reliable electrical performance has helped us build long-term relationships with clients across infrastructure, energy, transportation, construction, and industrial sectors.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ==================== End Clients / Partners ==================== -->
+
+      <!-- <div class="main-marq marq-brand pb-80px mb-60px" data-ui-animate data-delay="0.2">
+                    <div class="slide-har st1">
+                        <div class="box">
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/1.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/2.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/3.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/4.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/1.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/2.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/3.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/4.svg" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/1.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/2.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/3.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/4.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/1.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/2.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/3.svg" alt=""></a>
+                            </div>
+                            <div class="item text-align-center">
+                                <a href="#0"><img src="assets/imgs/clients/4.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+<section class="plaza-cta-section pt-0 pb-0">
+    <div class="shape-bottom-left w-250px " data-speed="0.7" data-lag="0">
+        <!-- opacity-5 -->
+        <!-- <img src="assets/imgs/mshap3.png" alt=""> -->
+        <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
+    </div>
+    <div class="cta-inner o-hidden position-relative">
+        <div class="pc-container">
+            <div class="cta-wrapper">
+
+                <!-- Left: headline + CTA button + tagline -->
+                <div class="cta-content-left">
+                    <h2 class="cta-heading">
+                        Looking for Reliable<br>Electrical Solutions?
+                    </h2>
+                    <div class="cta-actions">
+                        <a href="#!" class="butn-arrow-white">
+                            <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
+                            <span class="arrow-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 11.5H17.0635M17.0635 11.5L12.5635 7M17.0635 11.5L12.5635 16"></path></svg>
+                            </span>
+                        </a>
+                        <span class="cta-tagline">[ Est. 1975 — Pan India ]</span>
+                    </div>
+                </div>
+
+                <!-- Right: description text -->
+                <div class="cta-content-right">
+                    <p class="cta-description">
+                        [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+ 
+     <footer class="pc-footer">
+  <div class="pc-footer__card">
+    <div class="pc-container">
+
+      <!-- description replacing the big title -->
+      <div class="pc-description">
+        <p>Starting from a fledgling organization 35 years ago, R K Cable — now known as Plaza Cables — has established itself as a major player in India's cable &amp; wire industry, delivering certified, high-performance electrical solutions trusted by homes, industries, and government institutions nationwide.</p>
+      </div>
+
+      <!-- 3-column grid -->
+      <div class="pc-grid">
+
+        <!-- col 1: address → phone → email -->
+        <div class="pc-col-1">
+          <div class="pc-addr-block">
+            <span class="pc-label">Address</span>
+            <p class="pc-addr">A-74, Okhla Industrial Area<br>Phase-II, New Delhi – 110020<br>India</p>
+          </div>
+
+          <div class="pc-contact-group">
+            <span class="pc-label">Contact</span>
+            <p class="pc-tel-toll"><span>Toll Free</span>18001218050</p>
+            <p class="pc-tel-num">+91 11 66369666</p>
+          </div>
+
+          <div class="pc-email-link">
+            <span class="pc-label">Email</span>
+            <a href="mailto:info@plazacables.com">info@plazacables.com</a>
+          </div>
+        </div>
+
+        <!-- col 2: brand title centered in grid -->
+        <div class="pc-col-2">
+          <div class="pc-connect-title" data-text="Plaza Cables" id="pcTitle">Plaza Cables<sup class="pc-reg">®</sup></div>
+        </div>
+
+        <!-- col 3: quick links -->
+        <div class="pc-col-3">
+          <span class="pc-label">Quick Links</span>
+          <div class="pc-links">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="news.html">News &amp; Media</a></li>
+              <li><a href="network.html">Our Network</a></li>
+              <li><a href="csr.html">CSR Activities</a></li>
+            </ul>
+            <ul>
+                 <li><a href="team.html">Team</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+             
+            </ul>
+          </div>
+
+          <div style="margin-top:32px;">
+            <span class="pc-label">Legal</span>
+            <div class="pc-links" style="grid-template-columns:1fr;">
+              <ul>
+                <li><a href="#!">Privacy Policy</a></li>
+                <li><a href="#!">Terms of Use</a></li>
+                <li><a href="#!">Disclaimer</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pc-grid -->
+
+      <!-- copyright bar -->
+      <div class="pc-copy">
+        <span class="pc-copy__text">Plaza © 2026</span>
+        <ul class="pc-tags">
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1"> Triple Layer Insulated 3D wire </span><span class="pc-tag__t2"> Triple Layer Insulated 3D wire </span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Flame Retardant Flexible Cable</span><span class="pc-tag__t2">Flame Retardant Flexible Cable</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Telephone Cables</span><span class="pc-tag__t2">Telephone Cables</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+          <li>
+            <span class="pc-tag">
+              <a href="product.html" class="pc-tag__text"><span class="pc-tag__t1">Solar Cables</span><span class="pc-tag__t2">Solar Cables</span></a>
+              <span class="pc-tag__icon">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M8.5 2.5L2.5 9.5M2.5 9.5H7.5M2.5 9.5V4.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+            </span>
+          </li>
+        </ul>
+        <span class="pc-copy__text pc-copy__since">[ Since 1975 ]</span>
+      </div>
+
+    </div><!-- /pc-container -->
+
+    <button class="pc-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M9 4L4 9M9 4L14 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="pc-footer__bottom-strip"></div>
+  </div>
+</footer>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.4.0.min.js"></script>
+    <!-- plugins -->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollSmoother.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/smoother-script.js"></script>
+    <script src="assets/js/springer.min.js"></script>
+    <!-- custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- <script>
+        $(function () {
+            var width = $(window).width();
+            if (width > 991) {
+                gsap.registerPlugin(ScrollTrigger);
+                let sections = gsap.utils.toArray(".hr-container .item-panel");
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: ".hr-container",
+                        start: "center center",
+                        end: "bottom bottom",
+                        pin: true,
+                        scrub: 1,
+                        end: () => "+=" + document.querySelector(".hr-container").offsetWidth
+                    }
+                });
+            }
+        });
+    </script> -->
+    <script>
+        // Industries Swiper
+var industriesSwiper = new Swiper('.industries-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay:true,
+    navigation: {
+        nextEl: '.industries-next',
+        prevEl: '.industries-prev',
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        }
+    }
+});
+    </script>
+    <!-- <script>
+/* ============================================================
+   MAGNETIC LETTER EFFECT
+   Each letter scales vertically + lifts up based on how close
+   the cursor's X position is to that letter — peak under the
+   pointer, smoothly falling off to the sides (Gaussian).
+   Mirrors the original: scale(1, up to 1.6), translateY(up to -24%).
+   ============================================================ */
+(function () {
+  const title = document.querySelector('.pc-connect-title');
+  if (!title) return;
+ 
+  // --- build the word/letter spans from data-text ---
+  const text = title.dataset.text || title.textContent;
+  title.textContent = '';
+  text.split(' ').forEach((word, wi, arr) => {
+    const w = document.createElement('span');
+    w.className = 'pc-word';
+    [...word].forEach(ch => {
+      const l = document.createElement('span');
+      l.className = 'pc-letter';
+      l.textContent = ch;
+      w.appendChild(l);
+    });
+    title.appendChild(w);
+    if (wi < arr.length - 1) title.appendChild(document.createTextNode(' '));
+  });
+  const sup = document.createElement('sup');
+  sup.className = 'pc-reg';
+  sup.textContent = '®';
+  title.appendChild(sup);
+ 
+  const letters = Array.from(title.querySelectorAll('.pc-letter'));
+ 
+  // tuning — matches the reference dev-tools values
+  const MAX_SCALE = 0.2;   // extra scaleY at the peak  -> max 1.6
+  const MAX_LIFT  = 24;    // % upward translate at peak -> -24%
+  const SIGMA     = 0.95;  // spread of the wave (in letter-widths)
+ 
+  let pointerX = null, raf = null;
+ 
+  function render() {
+    raf = null;
+    if (pointerX === null) return;
+    for (const l of letters) {
+      const r = l.getBoundingClientRect();
+      const center = r.left + r.width / 2;
+      // distance in "letter widths" (scaleY/translateY don't change width, so this is stable)
+      const d = (pointerX - center) / Math.max(r.width, 1);
+      const intensity = Math.exp(-(d * d) / (2 * SIGMA * SIGMA));
+      const scaleY = 1 + MAX_SCALE * intensity;
+      const liftY  = -MAX_LIFT * intensity;
+      l.style.transform = `translate3d(0, ${liftY.toFixed(2)}%, 0) scale(1, ${scaleY.toFixed(3)})`;
+    }
+  }
+ 
+  function schedule() { if (raf === null) raf = requestAnimationFrame(render); }
+ 
+  title.addEventListener('pointermove', (e) => { pointerX = e.clientX; schedule(); });
+  title.addEventListener('pointerleave', () => {
+    pointerX = null;
+    for (const l of letters) l.style.transform = 'translate3d(0,0,0) scale(1,1)';
+  });
+})();
+</script> -->
+<script>
+(function(){
+  const title = document.getElementById('pcTitle');
+  if(!title) return;
+
+  const sup = title.querySelector('.pc-reg');
+  const text = "Plaza Cables";
+  title.textContent = '';
+
+  text.split(' ').forEach((word, wi, arr)=>{
+    const w = document.createElement('span');
+    w.className = 'pc-word';
+    [...word].forEach(ch=>{
+      const l = document.createElement('span');
+      l.className = 'pc-letter';
+      l.textContent = ch;
+      w.appendChild(l);
+    });
+    title.appendChild(w);
+    if(wi < arr.length-1) title.appendChild(document.createTextNode(' '));
+  });
+  title.appendChild(sup);
+
+  const letters = Array.from(title.querySelectorAll('.pc-letter'));
+  const MAX_SCALE=0.2, MAX_LIFT=24, SIGMA=0.95;
+  let pointerX=null, raf=null;
+
+  function render(){
+    raf=null;
+    if(pointerX===null) return;
+    for(const l of letters){
+      const r=l.getBoundingClientRect();
+      const center=r.left+r.width/2;
+      const d=(pointerX-center)/Math.max(r.width,1);
+      const intensity=Math.exp(-(d*d)/(2*SIGMA*SIGMA));
+      const scaleY=1+MAX_SCALE*intensity;
+      const liftY=-MAX_LIFT*intensity;
+      l.style.transform=`translate3d(0,${liftY.toFixed(2)}%,0) scale(1,${scaleY.toFixed(3)})`;
+    }
+  }
+  function schedule(){if(raf===null) raf=requestAnimationFrame(render);}
+
+  title.addEventListener('pointermove',e=>{pointerX=e.clientX;schedule();});
+  title.addEventListener('pointerleave',()=>{
+    pointerX=null;
+    for(const l of letters) l.style.transform='translate3d(0,0,0) scale(1,1)';
+  });
+})();
+</script>
+<script>
+    (function () {
+  'use strict';
+
+  function init() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+      setTimeout(init, 50);
+      return;
+    }
+
+    var sticky       = document.getElementById('plz-ind-sticky');
+    var tabs         = document.getElementById('plz-ind-tabs');
+    var tabEls       = Array.prototype.slice.call(tabs.querySelectorAll('.plz-industries__tab'));
+    var boxes        = document.getElementById('plz-ind-boxes');
+    var boxInner     = document.getElementById('plz-ind-boxes-inner');
+    var dot          = document.getElementById('plz-ind-dot');
+    var dotLineSvg   = document.getElementById('plz-ind-dot-line');
+    var strokeLine   = document.getElementById('plz-ind-stroke-line');
+    var itemSections = Array.prototype.slice.call(sticky.querySelectorAll('.plz-industries__section-item'));
+
+    var ITEM_COUNT  = 5;
+    var TOTAL_STEPS = 1 + ITEM_COUNT; // 6 × 100vh
+
+    var currentItem = -1;
+    var uiVisible   = false;
+
+    var DOT_POSITIONS = [
+      { left: 52, top: 58 },
+      { left: 50, top: 60 },
+      { left: 48, top: 55 },
+      { left: 50, top: 58 },
+      { left: 54, top: 56 },
+    ];
+
+    // ── Pause all item videos at start ────────────────────────
+    itemSections.forEach(function (el) {
+      var v = el.querySelector('video');
+      if (v) { v.pause(); v.currentTime = 0; }
+    });
+
+    // ── Stroke line ───────────────────────────────────────────
+    function updateStroke() {
+      if (currentItem < 0) return;
+      var pos   = DOT_POSITIONS[currentItem];
+      var dotCX = (pos.left / 100) * window.innerWidth;
+      var dotCY = (pos.top  / 100) * window.innerHeight;
+      var br    = boxes.getBoundingClientRect();
+      strokeLine.setAttribute('x1', dotCX);
+      strokeLine.setAttribute('y1', dotCY);
+      strokeLine.setAttribute('x2', br.left);
+      strokeLine.setAttribute('y2', br.top + br.height * 0.35);
+    }
+
+    // ── Tab + box activation ──────────────────────────────────
+    function setActive(index) {
+      if (index === currentItem) return;
+      currentItem = index;
+
+      itemSections.forEach(function (el, i) {
+        var on  = (i === index);
+        el.classList.toggle('is-active', on);
+        var vid = el.querySelector('video');
+        if (vid) { on ? vid.play().catch(function () {}) : vid.pause(); }
+      });
+
+      tabEls.forEach(function (el, i) {
+        el.classList.toggle('is-active', i === index);
+      });
+
+      if (index >= 0 && index < ITEM_COUNT) {
+        boxInner.style.transform = 'translateX(' + (-index * 100) + '%)';
+      }
+
+      if (index >= 0) {
+        var p = DOT_POSITIONS[index];
+        dot.style.left = p.left + '%';
+        dot.style.top  = p.top  + '%';
+        requestAnimationFrame(updateStroke);
+      }
+    }
+
+    // ── Show / hide the UI panel ──────────────────────────────
+    function showUI(visible) {
+      if (visible === uiVisible) return;
+      uiVisible = visible;
+      tabs.classList.toggle('is-visible', visible);
+      boxes.classList.toggle('is-visible', visible);
+      dot.classList.toggle('is-visible', visible);
+      dotLineSvg.classList.toggle('is-visible', visible);
+      if (visible) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(updateStroke);
+        });
+      }
+    }
+
+    // ── Main ScrollTrigger ────────────────────────────────────
+    ScrollTrigger.create({
+      trigger   : sticky,
+      start     : 'top top',
+      end       : '+=' + (TOTAL_STEPS * 100) + '%',  // 600vh
+      pin       : true,
+      pinSpacing: true,
+      anticipatePin: 1,
+      scrub     : false,
+
+      onLeave: function () {
+        sticky.querySelectorAll('video').forEach(function (v) { v.pause(); });
+        showUI(false);
+        setActive(-1);
+      },
+
+      onLeaveBack: function () {
+        sticky.querySelectorAll('video').forEach(function (v) { v.pause(); });
+        showUI(false);
+        setActive(-1);
+      },
+
+      onUpdate: function (self) {
+        var p = self.progress; // 0 → 1
+
+        // Show/hide UI (tabs, boxes, dot, line)
+        var shouldUI = p >= 0.05 && p < 1.0;
+        showUI(shouldUI);
+
+        if (!shouldUI) {
+          setActive(-1);
+          return;
+        }
+
+        // Map progress to item index 0–4
+        var itemProgress = (p - 0.05) / 0.95;
+        var index        = Math.min(
+          Math.floor(itemProgress * ITEM_COUNT),
+          ITEM_COUNT - 1
+        );
+        setActive(index);
+      }
+    });
+
+    // ── Tab click: jump to that item's scroll position ────────
+    tabEls.forEach(function (tab, i) {
+      tab.addEventListener('click', function () {
+        var smoother = (typeof ScrollSmoother !== 'undefined') &&
+                       ScrollSmoother.get && ScrollSmoother.get();
+        var targetProgress = 0.05 + (i / ITEM_COUNT) * 0.95 + 0.01;
+        var allTriggers    = ScrollTrigger.getAll();
+        var st             = null;
+        for (var t = 0; t < allTriggers.length; t++) {
+          if (allTriggers[t].trigger === sticky) { st = allTriggers[t]; break; }
+        }
+        if (!st) return;
+        var targetScroll = st.start + (st.end - st.start) * targetProgress;
+        if (smoother) {
+          smoother.scrollTo(targetScroll, true);
+        } else {
+          window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ── Resize: recompute stroke ──────────────────────────────
+    window.addEventListener('resize', function () {
+      if (uiVisible) requestAnimationFrame(updateStroke);
+    }, { passive: true });
+
+  } // end init()
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(init, 0); });
+  } else {
+    setTimeout(init, 0);
+  }
+
+})();
+</script>
+<!-- <script>
+/* ============================================================
+   PLZ INDUSTRIES — ScrollTrigger-native, ScrollSmoother-safe
+   Base video is SCRUBBED by scroll progress (never free-runs).
+   This ensures perfect sync on every scroll pass, forward or back.
+   ============================================================ */
+(function () {
+  'use strict';
+ 
+  function init() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+      setTimeout(init, 50);
+      return;
+    }
+ 
+    var sticky       = document.getElementById('plz-ind-sticky');
+    var tabs         = document.getElementById('plz-ind-tabs');
+    var tabEls       = Array.prototype.slice.call(tabs.querySelectorAll('.plz-industries__tab'));
+    var boxes        = document.getElementById('plz-ind-boxes');
+    var boxInner     = document.getElementById('plz-ind-boxes-inner');
+    var dot          = document.getElementById('plz-ind-dot');
+    var dotLineSvg   = document.getElementById('plz-ind-dot-line');
+    var strokeLine   = document.getElementById('plz-ind-stroke-line');
+    var introTitle   = document.getElementById('plz-ind-intro-title');
+    var itemSections = Array.prototype.slice.call(sticky.querySelectorAll('.plz-industries__section-item'));
+    var baseSection  = sticky.querySelector('.plz-industries__section-base');
+    var baseVid      = baseSection && baseSection.querySelector('video');
+ 
+    var ITEM_COUNT  = 5;
+    var TOTAL_STEPS = 2 + ITEM_COUNT; // 7 × 100vh
+ 
+    var currentItem = -1;
+    var uiVisible   = false;
+ 
+    var DOT_POSITIONS = [
+      { left: 52, top: 58 },
+      { left: 50, top: 60 },
+      { left: 48, top: 55 },
+      { left: 50, top: 58 },
+      { left: 54, top: 56 },
+    ];
+ 
+    // ── Park base video immediately — it must NEVER free-run ──
+    if (baseVid) {
+      baseVid.pause();
+      baseVid.loop        = false;
+      baseVid.currentTime = 0;
+      // Preload so readyState is available quickly
+      baseVid.preload = 'auto';
+    }
+ 
+    // ── Pause all item videos at start ────────────────────────
+    itemSections.forEach(function (el) {
+      var v = el.querySelector('video');
+      if (v) { v.pause(); v.currentTime = 0; }
+    });
+ 
+    // ── Stroke line ───────────────────────────────────────────
+    function updateStroke() {
+      if (currentItem < 0) return;
+      var pos   = DOT_POSITIONS[currentItem];
+      var dotCX = (pos.left / 100) * window.innerWidth;
+      var dotCY = (pos.top  / 100) * window.innerHeight;
+      var br    = boxes.getBoundingClientRect();
+      strokeLine.setAttribute('x1', dotCX);
+      strokeLine.setAttribute('y1', dotCY);
+      strokeLine.setAttribute('x2', br.left);
+      strokeLine.setAttribute('y2', br.top + br.height * 0.35);
+    }
+ 
+    // ── Tab + box activation ──────────────────────────────────
+    function setActive(index) {
+      if (index === currentItem) return;
+      currentItem = index;
+ 
+      itemSections.forEach(function (el, i) {
+        var on  = (i === index);
+        el.classList.toggle('is-active', on);
+        var vid = el.querySelector('video');
+        if (vid) { on ? vid.play().catch(function () {}) : vid.pause(); }
+      });
+ 
+      tabEls.forEach(function (el, i) {
+        el.classList.toggle('is-active', i === index);
+      });
+ 
+      if (index >= 0 && index < ITEM_COUNT) {
+        boxInner.style.transform = 'translateX(' + (-index * 100) + '%)';
+      }
+ 
+      if (index >= 0) {
+        var p = DOT_POSITIONS[index];
+        dot.style.left = p.left + '%';
+        dot.style.top  = p.top  + '%';
+        requestAnimationFrame(updateStroke);
+      }
+    }
+ 
+    // ── Show / hide the UI panel ──────────────────────────────
+    // NOTE: No baseVid play/pause here — scrub handles it all.
+    function showUI(visible) {
+      if (visible === uiVisible) return;
+      uiVisible = visible;
+      tabs.classList.toggle('is-visible', visible);
+      boxes.classList.toggle('is-visible', visible);
+      dot.classList.toggle('is-visible', visible);
+      dotLineSvg.classList.toggle('is-visible', visible);
+      if (visible) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(updateStroke);
+        });
+      }
+    }
+ 
+    // ── Intro title (opacity only) ────────────────────────────
+    function setIntroTitle(progress) {
+      var fadeInEnd    = 0.10;
+      var fadeOutStart = 0.22;
+      var fadeOutEnd   = 0.32;
+ 
+      if (progress < fadeInEnd) {
+        introTitle.classList.remove('is-hiding');
+        introTitle.classList.toggle('is-visible', progress > 0.02);
+      } else if (progress < fadeOutStart) {
+        introTitle.classList.add('is-visible');
+        introTitle.classList.remove('is-hiding');
+      } else if (progress < fadeOutEnd) {
+        introTitle.classList.remove('is-visible');
+        introTitle.classList.add('is-hiding');
+      } else {
+        introTitle.classList.remove('is-visible');
+        introTitle.classList.remove('is-hiding');
+      }
+    }
+ 
+    // ── Scrub base video to scroll progress ───────────────────
+    // Intro phase = p 0 → 0.30. Video maps exactly across that range.
+    // After 0.30 the video parks on its last frame.
+    // This function is pure: same progress → same frame, always.
+    function scrubBaseVideo(p) {
+      if (!baseVid || baseVid.readyState < 1) return;
+      var dur = baseVid.duration;
+      if (!dur || isNaN(dur)) return;
+ 
+      var targetTime;
+      if (p <= 0) {
+        targetTime = 0;
+      } else if (p < 0.30) {
+        targetTime = (p / 0.30) * dur;
+      } else {
+        targetTime = dur;
+      }
+ 
+      // Only seek if meaningfully different (avoids unnecessary decode work)
+      if (Math.abs(baseVid.currentTime - targetTime) > 0.04) {
+        baseVid.currentTime = targetTime;
+      }
+    }
+ 
+    // ── Main ScrollTrigger ────────────────────────────────────
+    ScrollTrigger.create({
+      trigger   : sticky,
+      start     : 'top top',
+      end       : '+=' + (TOTAL_STEPS * 100) + '%',  // 700vh
+      pin       : true,
+      pinSpacing: true,
+      anticipatePin: 1,
+      scrub     : false,
+ 
+      onEnter: function () {
+        // onUpdate will immediately scrub to correct position
+      },
+ 
+      onLeave: function () {
+        // Past the bottom — pause everything, hide UI
+        sticky.querySelectorAll('video').forEach(function (v) { v.pause(); });
+        showUI(false);
+        setActive(-1);
+        introTitle.classList.remove('is-visible', 'is-hiding');
+      },
+ 
+      onLeaveBack: function () {
+        // Scrolled back above the section — reset to frame 0
+        sticky.querySelectorAll('video').forEach(function (v) { v.pause(); });
+        showUI(false);
+        setActive(-1);
+        introTitle.classList.remove('is-visible', 'is-hiding');
+        if (baseVid) baseVid.currentTime = 0;
+      },
+ 
+      onEnterBack: function () {
+        // Re-entering from below — onUpdate takes over immediately
+      },
+ 
+      onUpdate: function (self) {
+        var p = self.progress; // 0 → 1
+ 
+        // 1. Scrub base video — always frame-accurate, never drifts
+        scrubBaseVideo(p);
+ 
+        // 2. Intro title opacity
+        setIntroTitle(p);
+ 
+        // 3. Show/hide UI (tabs, boxes, dot, line)
+        var shouldUI = p >= 0.30 && p < 1.0;
+        showUI(shouldUI);
+ 
+        if (!shouldUI) {
+          setActive(-1);
+          return;
+        }
+ 
+        // 4. Map progress to item index 0–4
+        var itemProgress = (p - 0.30) / 0.70;
+        var index        = Math.min(
+          Math.floor(itemProgress * ITEM_COUNT),
+          ITEM_COUNT - 1
+        );
+        setActive(index);
+      }
+    });
+ 
+    // ── Tab click: jump to that item's scroll position ────────
+    tabEls.forEach(function (tab, i) {
+      tab.addEventListener('click', function () {
+        var smoother = (typeof ScrollSmoother !== 'undefined') &&
+                       ScrollSmoother.get && ScrollSmoother.get();
+        var targetProgress = 0.30 + (i / ITEM_COUNT) * 0.70 + 0.01;
+        var allTriggers    = ScrollTrigger.getAll();
+        var st             = null;
+        for (var t = 0; t < allTriggers.length; t++) {
+          if (allTriggers[t].trigger === sticky) { st = allTriggers[t]; break; }
+        }
+        if (!st) return;
+        var targetScroll = st.start + (st.end - st.start) * targetProgress;
+        if (smoother) {
+          smoother.scrollTo(targetScroll, true);
+        } else {
+          window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+        }
+      });
+    });
+ 
+    // ── Resize: recompute stroke ──────────────────────────────
+    window.addEventListener('resize', function () {
+      if (uiVisible) requestAnimationFrame(updateStroke);
+    }, { passive: true });
+ 
+  } // end init()
+ 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(init, 0); });
+  } else {
+    setTimeout(init, 0);
+  }
+ 
+})();
+</script> -->
+<script>
+(function () {
+  'use strict';
+
+  function rvInit() {
+    var panel       = document.getElementById('rv-about-panel');
+    var imgCover    = document.getElementById('rv-img-cover');
+    var imgEl       = document.getElementById('rv-img-el');
+    var textOverlay = document.getElementById('rv-text-overlay');
+    var counterEl   = document.getElementById('rv-counter');
+
+    if (!panel || !imgCover || !imgEl || !textOverlay || !counterEl) return;
+
+    // ── helpers ──────────────────────────────────────────────────
+    function rvLerp(a, b, t) { return a + (b - a) * t; }
+    function rvClamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+    function rvEaseOut(t) { return 1 - Math.pow(1 - t, 3); }
+    function rvEaseInOut(t) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2; }
+    
+    // Helper to format numbers with local comma separation (e.g., 100,500,000)
+    function formatNumber(num) {
+      return Math.floor(num).toLocaleString('en-US');
+    }
+
+    // ── config ───────────────────────────────────────────────────
+    var PHASE1_END    = 0.65;  // 0→65% of pin: pill expands to fullscreen
+    var IMG_SCALE_MAX = 1.4;   // image scale at end of pin
+    var INSET_V       = 20;    // starting vertical inset %
+    var INSET_H       = 40;    // starting horizontal inset %
+    var ROUND_START   = 20;    // starting border-radius px
+    var TRANSY_START  = 5;     // starting cover translateY %
+    
+    // Counter config
+    var TARGET_NUMBER = 100500000;
+    var COUNTER_START_PHASE = 0.70; // Start counting after the pill is nearly full-screen
+
+    // ── set initial state ────────────────────────────────────────
+    imgCover.style.clipPath = 'inset(' + INSET_V + '% ' + INSET_H + '% round ' + ROUND_START + 'px)';
+    imgCover.style.transform = 'translateY(' + TRANSY_START + '%)';
+    imgEl.style.transform = 'scale(1,1)';
+    counterEl.textContent = "0";
+
+    // ── drive via ScrollTrigger progress ─────────────────────────
+    function rvUpdate(p) {
+      // Phase 1: expand clip-path
+      var p1  = rvClamp(p / PHASE1_END, 0, 1);
+      var p1e = rvEaseOut(p1);
+
+      var insetV = rvLerp(INSET_V, 0, p1e);
+      var insetH = rvLerp(INSET_H, 0, p1e);
+      var round  = rvLerp(ROUND_START, 0, p1e);
+      var transY = rvLerp(TRANSY_START, 0, p1e);
+
+      imgCover.style.clipPath  = 'inset(' + insetV + '% ' + insetH + '% round ' + round + 'px)';
+      imgCover.style.transform = 'translateY(' + transY + '%)';
+
+      // Phase 2: image scale after fullscreen
+      var p2  = rvClamp((p - PHASE1_END) / (1 - PHASE1_END), 0, 1);
+      var p2e = rvEaseInOut(p2);
+      var sc  = rvLerp(1, IMG_SCALE_MAX, p2e);
+      imgEl.style.transform = 'scale(' + sc + ',' + sc + ')';
+
+      // Text: show when expansion is ~85% done
+      var textShow = p1 > 0.85;
+      textOverlay.classList.toggle('rv-visible', textShow);
+      textOverlay.querySelectorAll('.rv-word').forEach(function(w) {
+        w.classList.toggle('rv-in', textShow);
+      });
+
+      // ── Odometer / Counter Logic ─────────────────────────────────
+      // Tracks progress specifically after COUNTER_START_PHASE
+      var pCounter = rvClamp((p - COUNTER_START_PHASE) / (1 - COUNTER_START_PHASE), 0, 1);
+      var pCounterEase = rvEaseOut(pCounter); // Smoothes out the speed deceleration near the end
+      
+      var currentVal = rvLerp(0, TARGET_NUMBER, pCounterEase);
+      counterEl.textContent = formatNumber(currentVal);
+    }
+
+    // ── Create the ScrollTrigger ─────────────────────────────────
+    ScrollTrigger.create({
+      trigger     : panel,          
+      start       : 'top top',
+      end         : '+=500%',       
+      pin         : true,           
+      pinSpacing  : true,           
+      anticipatePin: 1,
+      scrub       : false,          
+      onUpdate    : function(self) {
+        rvUpdate(self.progress);
+      },
+      onLeave     : function() { rvUpdate(1); },
+      onLeaveBack : function() { rvUpdate(0); }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(rvInit, 0); });
+  } else {
+    setTimeout(rvInit, 0);
+  }
+})();
+</script>
+</body>
+</html>
