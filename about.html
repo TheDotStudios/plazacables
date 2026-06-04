@@ -14,7 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/plugins.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
+      .navbar .butn-arrow:hover {
+    /* color: #111012; */
+    color: #161616 !important;
+}
       .navbar .logo {
     position: relative;
     filter: unset !important;
@@ -290,75 +295,81 @@
         <div id="smooth-content">
             <main class="o-hidden">
 
-                <header class="pg-hero pb-200px">
-                      <div class="shape-top-right w-200px" data-speed="0.7" data-lag="0">
-                        <!-- <img src="assets/imgs/mshap1.png" alt="">   opacity-1-->
-                        <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
-                    </div>
+          
+<!-- ============ REPLACE YOUR EXISTING <header class="pg-hero"> WITH THIS ============ -->
+ 
+                <header class="pc-abh">
                     <div class="container">
-                        <div class="row mb-80px">
-                            <div class="col-lg-2">
-                                <div class="pt-15px">
-                                    <div class="sec-head">
-                            <h6 class="bord mb-50px text-uppercase">About Plaza</h6>
+ 
+                    <div class="" data-ui-animate data-delay="0.2">
+                            <!-- <h6 class="bord mb-50px text-uppercase">About Plaza</h6> -->
+                             <h6 class="pc-eyebrow text-uppercase">About Plaza</h6>
                         </div>
+                        <h1 class="pc-abh-title" data-ui-animate data-delay="0.15">
+                            Powering India with <em>trusted</em> electrical solutions.
+                        </h1>
+ 
+                        <!-- 3) Two-column content -->
+                        <div class="pc-abh-row">
+ 
+                            <!-- LEFT: lead + description + brand pills -->
+                            <div data-ui-animate data-delay="0.1">
+                                <p class="pc-abh-lead">Over five decades of innovation, quality, and reliability in wires, cables, and electrical infrastructure.</p>
+                                <p class="pc-abh-desc">Founded in 1975, Plaza Group has grown into a trusted name in India's electrical industry. Through our brands &mdash; Plaza Wires, PCG, and Action Wires &mdash; we provide reliable and high-performance electrical products designed for homes, industries, and large infrastructure projects. Our journey is driven by innovation, uncompromising quality, and a deep commitment to safety and sustainability. With decades of expertise and a forward-looking vision, we continue to build solutions that power progress across the nation.</p>
+                                <div class="pc-abh-brands">
+                                    <span class="pc-abh-brand">Plaza Wires</span>
+                                    <span class="pc-abh-brand">PCG</span>
+                                    <span class="pc-abh-brand">Action Wires</span>
                                 </div>
                             </div>
-                            <div class="col-lg-10">
-                                <div>
-                                    <h1 class="fs-80"> Powering India with Trusted Electrical Solutions
-</h1>
+ 
+                            <!-- RIGHT: single feature image + floating year badge -->
+                            <div class="pc-abh-visual" data-ui-animate data-delay="0.2">
+                                <div class="pc-abh-img">
+                                    <!-- Drop your photo here. Parallax via ScrollSmoother:
+                                         <div class="bg-img" data-background="assets/imgs/about-bg-img.webp" data-speed="0.9" data-lag="0"></div>
+                                         OR a regular <img>: -->
+                                    <img src="assets/imgs/about-bg-img.webp" alt="Plaza Cables">
+                                    <!-- <div class="pc-abh-img-ph">About Hero Image</div> -->
+                                </div>
+                                <div class="pc-abh-badge">
+                                    <span class="pc-abh-badge-num">50<em>+</em></span>
+                                    <span class="pc-abh-badge-lbl">Years of Excellence</span>
                                 </div>
                             </div>
+ 
                         </div>
-                        <div class="row md-marg align-items-end">
-                            <div class="col-lg-2">
-                                <div class="text-align-right md-mb80">
-                                    <!-- <ul class="rest fs-18">
-                                        <li class="mb-10px">Brand identity</li>
-                                        <li class="mb-10px">Creative direction</li>
-                                        <li class="mb-10px">Motion design</li>
-                                        <li class="mb-10px">Figma</li>
-                                        <li>Development</li>
-                                    </ul> -->
-                                    <p>
-                                         Over five decades of innovation, quality, and reliability in wires, cables, and electrical infrastructure.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-lg-10">
-                                <div class="row md-marg">
-                                    <div class="col-sm-6 sm-mb30">
-                                        <div class="fit-img border-radius-30px o-hidden h-700px">
-                                            <div class="bg-img background-position-center h-800px"
-                                                data-background="assets/imgs/about-bg-img.webp" data-speed="0.9"
-                                                data-lag="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div>
-                                            <div class="border-radius-30px o-hidden h-450px mb-50px">
-                                                <div class="bg-img background-position-center h-550px"
-                                                    data-background="assets/imgs/plaza-web-01.webp" data-speed="0.8"
-                                                    data-lag="0"></div>
-                                            </div>
-                                            <div>
-                                                <p class="fs-20">Founded in 1975, Plaza Group has grown into a trusted name in India’s electrical industry. Through our brands - Plaza Wires, PCG, and Action Wires - we provide reliable and high-performance electrical products designed for homes, industries, and large infrastructure projects. Our journey is driven by innovation, uncompromising quality, and a deep commitment to safety and sustainability. With decades of expertise and a forward-looking vision, we continue to build solutions that power progress across the nation.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+ 
+                        <!-- 4) Stats strip -->
+                        <div class="pc-abh-stats" data-ui-animate data-delay="0.25">
+                    <div class="pc-abh-stat">
+                        <span class="pc-abh-stat-num" data-count-to="1975">1975</span>
+                        <span class="pc-abh-stat-lbl">Founded</span>
+                    </div>
+                    <div class="pc-abh-stat">
+                        <span class="pc-abh-stat-num" data-count-to="3" data-count-pad="2">03<em>+</em></span>
+                        <span class="pc-abh-stat-lbl">Group Brands</span>
+                    </div>
+                    <div class="pc-abh-stat">
+                        <span class="pc-abh-stat-num" data-count-to="15">15<em>+</em></span>
+                        <span class="pc-abh-stat-lbl">States Covered</span>
+                    </div>
+                    <div class="pc-abh-stat">
+                        <span class="pc-abh-stat-num" data-count-to="2250">2250<em>+</em></span>
+                        <span class="pc-abh-stat-lbl">Channel Partners</span>
+                    </div>
+                </div>
+ 
                     </div>
                 </header>
+ 
+<!-- ============ END HERO ============ -->
 
   
 <section class="mission-vision-style1 pt-0 pb-200px">
     <div class="container">
         <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.2">
-            <h6 class="text-uppercase">Our Purpose</h6>
+            <h6 class="pc-eyebrow text-uppercase">Our Purpose</h6>
         </div>
         <div class="row">
 
@@ -513,9 +524,9 @@
  
     <!-- Section Header (matches your .sec-head .bord pattern) -->
     <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.1">
-      <div class="row justify-content-between align-items-end">
+      <div class="row justify-content-between">
         <div class="col-lg-4">
-          <h6 class="text-uppercase">Our Company</h6>
+          <h6 class="pc-eyebrow text-uppercase">Our Company</h6>
         </div>
         <div class="col-lg-5">
           <p >
@@ -644,9 +655,9 @@
 
    
     <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.1">
-      <div class="row justify-content-between align-items-end">
+      <div class="row justify-content-between">
         <div class="col-lg-4">
-          <h6 class="text-uppercase">Our Journey</h6>
+          <h6 class="pc-eyebrow text-uppercase">Our Journey</h6>
         </div>
         <div class="col-lg-5">
           <p >
@@ -1024,6 +1035,100 @@ var industriesSwiper = new Swiper('.industries-swiper', {
   });
 })();
 </script>
+  
+<script>
+(function () {
  
+  // Ease-out cubic: starts fast, decelerates — feels natural.
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+ 
+  function pad(numStr, width) {
+    while (width && numStr.length < width) numStr = '0' + numStr;
+    return numStr;
+  }
+ 
+  function format(value, padWidth) {
+    return pad(String(Math.floor(value)), padWidth);
+  }
+ 
+  function suffixHTMLOf(el) {
+    var em = el.querySelector('em');
+    return em ? em.outerHTML : '';
+  }
+ 
+  function animateCount(el, target, duration, padWidth, suffixHTML) {
+    var startTs = null;
+    function frame(ts) {
+      if (startTs === null) startTs = ts;
+      var progress = Math.min((ts - startTs) / duration, 1);
+      var value = easeOutCubic(progress) * target;
+      el.innerHTML = format(value, padWidth) + suffixHTML;
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        // Lock to the exact target (avoid floor rounding leaving us 1 short)
+        el.innerHTML = format(target, padWidth) + suffixHTML;
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+ 
+  function init() {
+    var sections = document.querySelectorAll('.pc-abh-stats');
+    if (!sections.length) return;
+    if (!('IntersectionObserver' in window)) return; // graceful fallback: leave final values
+ 
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+    sections.forEach(function (section) {
+      var nums = section.querySelectorAll('.pc-abh-stat-num[data-count-to]');
+      if (!nums.length) return;
+ 
+      // Capture each number's target / padding / suffix HTML
+      var items = [];
+      nums.forEach(function (el) {
+        items.push({
+          el: el,
+          target: parseInt(el.getAttribute('data-count-to'), 10) || 0,
+          pad: parseInt(el.getAttribute('data-count-pad'), 10) || 0,
+          suffix: suffixHTMLOf(el)
+        });
+      });
+ 
+      // Reduced motion: leave final values, no animation.
+      if (reduceMotion) return;
+ 
+      // Reset numbers to 0 (so the first painted frame matches what
+      // the animation will begin from — no jump from final → 0 → up).
+      items.forEach(function (p) {
+        p.el.innerHTML = format(0, p.pad) + p.suffix;
+      });
+ 
+      var triggered = false;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !triggered) {
+            triggered = true;
+            items.forEach(function (p) {
+              animateCount(p.el, p.target, 1800, p.pad, p.suffix);
+            });
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.4 });
+ 
+      io.observe(section);
+    });
+  }
+ 
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 </body>
 </html>
