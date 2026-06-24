@@ -108,7 +108,7 @@
               <a
                 class="nav-link dropdown-toggle"
                 data-toggle="dropdown"
-                href="about.html"
+                href="#!"
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false"
@@ -271,7 +271,7 @@
             </div>
           </header>
 
-          <section class="pc-section">
+          <section class="pc-section sm-pb-0px">
             <div class="container">
               <div class="pc-ir-snapshot" data-ui-animate data-delay="0.1">
                 <div class="pc-ir-snapshot-block">
@@ -2024,38 +2024,66 @@
           </section>
 
           <script>
-            (function () {
-              var navLinks = document.querySelectorAll(".pc-ir-nav-list a");
-              if (!navLinks.length || !("IntersectionObserver" in window))
-                return;
-              var map = {};
-              navLinks.forEach(function (a) {
-                var id = a.getAttribute("href").slice(1);
-                var el = document.getElementById(id);
-                if (el) map[id] = a;
-              });
-              var io = new IntersectionObserver(
-                function (entries) {
-                  entries.forEach(function (e) {
-                    if (e.isIntersecting && map[e.target.id]) {
-                      navLinks.forEach(function (a) {
-                        a.classList.remove("is-active");
-                      });
-                      map[e.target.id].classList.add("is-active");
-                    }
-                  });
-                },
-                { rootMargin: "-40% 0px -55% 0px", threshold: 0 },
-              );
-              Object.keys(map).forEach(function (id) {
-                var el = document.getElementById(id);
-                if (el) io.observe(el);
-              });
-            })();
+          (function () {
+  /* ── 1. Smooth scroll + prevent anchor jump ── */
+  document.querySelectorAll(".pc-ir-nav-list a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var id = this.getAttribute("data-ir-target");
+      var target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  /* ── 2. Active nav highlight via IntersectionObserver ── */
+  var navLinks = document.querySelectorAll(".pc-ir-nav-list a");
+  if (!navLinks.length || !("IntersectionObserver" in window)) return;
+
+  var map = {};
+  navLinks.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map[id] = a;
+  });
+
+  var io = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && map[e.target.id]) {
+          navLinks.forEach(function (a) {
+            a.classList.remove("is-active");
+          });
+          map[e.target.id].classList.add("is-active");
+        }
+      });
+    },
+    { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+  );
+
+  Object.keys(map).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) io.observe(el);
+  });
+
+  /* ── 3. GSAP pin — desktop only ── */
+  if (typeof ScrollTrigger === "undefined") return;
+
+  var isDesktop = window.innerWidth > 991;
+
+  if (isDesktop) {
+    ScrollTrigger.create({
+      trigger: ".pc-ir-layout",
+      start: "top top",
+      end: "bottom bottom",
+      pin: ".pc-ir-nav",
+      pinSpacing: false,
+    });
+  }
+})();
           </script>
 
-     <section class="plaza-cta-section pt-0 pb-0">
-    <div class="shape-bottom-left w-250px " data-speed="0.7" data-lag="0">
+   <section class="plaza-cta-section pt-0 pb-0">
+    <div class="shape-bottom-left sm-none w-250px " data-speed="0.7" data-lag="0">
         <!-- opacity-5 -->
         <!-- <img src="assets/imgs/mshap3.png" alt=""> -->
         <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
@@ -2069,6 +2097,9 @@
                     <h2 class="cta-heading">
                         Looking for Reliable<br>Electrical Solutions?
                     </h2>
+                    <p class="cta-description sm-block">
+                        [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
+                    </p>
                     <div class="cta-actions">
                         <a href="#!" class="butn-arrow-white">
                             <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
@@ -2083,7 +2114,7 @@
 
                 <!-- Right: description text -->
                 <div class="cta-content-right">
-                    <p class="cta-description">
+                    <p class="cta-description sm-none">
                         [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
                     </p>
                 </div>
@@ -2092,6 +2123,7 @@
         </div>
     </div>
 </section>
+ 
  
      <footer class="pc-footer">
   <div class="pc-footer__card">

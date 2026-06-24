@@ -15,7 +15,15 @@
     <link rel="stylesheet" href="assets/css/plugins.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <style>
+      @media screen and (max-width:600px){
+        .navbar .icon-bar {
+    /* color: #fff; */
+    color: #161616;
+}
+      }
       .navbar .butn-arrow:hover {
     /* color: #111012; */
     color: #161616 !important;
@@ -240,7 +248,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html"><span class="rolling-text">Home</span></a></li>
                     <!-- <li class="nav-item"><a class="nav-link" href="#!"><span class="rolling-text">About Us</span></a></li> -->
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">About Us</span></a>
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#!" role="button" aria-haspopup="true" aria-expanded="false"><span class="rolling-text">About Us</span></a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="about.html">Plaza Group</a></li>
                             <li><a class="dropdown-item" href="team.html">Our Leadership</a></li>
@@ -366,61 +374,112 @@
 <!-- ============ END HERO ============ -->
 
   
-<section class="mission-vision-style1 pt-0 pb-200px">
+<!-- Swiper CSS (only loaded, activated on mobile via JS) -->
+
+<section class="mission-vision-style1 pt-0 pb-200px sm-pb-70px">
     <div class="container">
-        <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.2">
+        <div class="sec-head bord mb-80px sm-mb-15px" data-ui-animate data-delay="0.2">
             <h6 class="pc-eyebrow text-uppercase">Our Purpose</h6>
         </div>
-        <div class="row">
 
-            <!-- Vision Card -->
-            <div class="col-lg-6 about-inner-item" data-ui-animate data-delay="0.3">
-                <div class="item sub-bg">
-                    <span class="mv-icon mb-40px">
-                        <img src="assets/imgs/serv/1.svg" class="h-60px" alt="">
-                    </span>
-                    <span class="d-block text-uppercase ls-1 fz-12 mb-10px opacity-7">Vision</span>
-                    <h5 class="mb-30px">Where we're headed</h5>
-                    <blockquote class="bord-left pl-20px mb-30px">
-                        <p class="fz-14 fw-500 fst-italic">"To build a future powered by quality, driven by innovation, and guided by responsibility."</p>
-                    </blockquote>
-                    <p class="fz-14 opacity-8 mb-20px">The Plaza Group envisions becoming a technology-driven enterprise delivering advanced electrical solutions across markets. Our focus remains on innovation, expansion, and sustainable growth, while consistently upholding the highest standards of quality and reliability.</p>
-                    <span class="d-block fz-13 fw-500  bord-top pt-20px">
-                        At Plaza, quality defines us. Growth inspires us. Responsibility guides us.
-                    </span>
+        <!-- Desktop: normal row | Mobile: Swiper wrapper -->
+        <div class="mv-cards-wrapper">
+
+            <!-- Desktop row (hidden on mobile) -->
+            <div class="row mv-desktop-row">
+                <div class="col-lg-6 about-inner-item" data-ui-animate data-delay="0.3">
+                    <div class="item sub-bg">
+                        <span class="mv-icon mb-40px">
+                            <img src="assets/imgs/1.svg" class="h-60px" alt="">
+                        </span>
+                        <span class="d-block text-uppercase ls-1 fz-12 mb-10px opacity-7">Vision</span>
+                        <h5 class="mb-30px">Where we're headed</h5>
+                        <blockquote class="bord-left pl-20px mb-30px">
+                            <p class="fz-14 fw-500 fst-italic">"To build a future powered by quality, driven by innovation, and guided by responsibility."</p>
+                        </blockquote>
+                        <p class="fz-14 opacity-8 mb-20px">The Plaza Group envisions becoming a technology-driven enterprise delivering advanced electrical solutions across markets. Our focus remains on innovation, expansion, and sustainable growth, while consistently upholding the highest standards of quality and reliability.</p>
+                        <span class="d-block fz-13 fw-500 bord-top pt-20px">
+                            At Plaza, quality defines us. Growth inspires us. Responsibility guides us.
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6 about-inner-item" data-ui-animate data-delay="0.4">
+                    <div class="item bg-dark">
+                        <span class="mv-icon mb-40px">
+                            <img src="assets/imgs/2.svg" class="h-60px" alt="">
+                        </span>
+                        <span class="d-block text-uppercase ls-1 fz-12 mb-10px opacity-5 color-white text-white">Mission</span>
+                        <h5 class="mb-30px color-white">What drives us every day</h5>
+                        <blockquote class="bord-left-white pl-20px mb-30px">
+                            <p class="fz-14 fw-500 fst-italic color-white text-white">"To consistently deliver dependable electrical solutions that exceed standards and expectations."</p>
+                        </blockquote>
+                        <p class="fz-14 opacity-7 mb-20px color-white text-white">Our mission is to consistently provide high-performance electrical products while maintaining uncompromising quality standards, strengthening our distribution network, and fostering long-term relationships with customers, partners, and communities.</p>
+                        <p class="fz-14 opacity-7 mb-20px color-white text-white">Through innovation, operational excellence, and responsible practices, we strive to create reliable connections that support modern infrastructure and everyday life.</p>
+                        <span class="d-block fz-13 fw-500 bord-top-white pt-20px opacity-7 color-white">
+                            We exist to deliver reliability in every connection and confidence in every product.
+                        </span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Mission Card -->
-            <div class="col-lg-6 about-inner-item" data-ui-animate data-delay="0.4">
-                <div class="item bg-dark">
-                    <span class="mv-icon mb-40px">
-                        <img src="assets/imgs/serv/2.svg" class="h-60px" alt="">
-                    </span>
-                    <span class="d-block text-uppercase ls-1 fz-12 mb-10px opacity-5 color-white text-white">Mission</span>
-                    <h5 class="mb-30px color-white">What drives us every day</h5>
-                    <blockquote class="bord-left-white pl-20px mb-30px">
-                        <p class="fz-14 fw-500 fst-italic color-white text-white">"To consistently deliver dependable electrical solutions that exceed standards and expectations."</p>
-                    </blockquote>
-                    <p class="fz-14 opacity-7 mb-20px color-white text-white">Our mission is to consistently provide high-performance electrical products while maintaining uncompromising quality standards, strengthening our distribution network, and fostering long-term relationships with customers, partners, and communities.</p>
-                    <p class="fz-14 opacity-7 mb-20px color-white text-white">Through innovation, operational excellence, and responsible practices, we strive to create reliable connections that support modern infrastructure and everyday life.</p>
-                    <span class="d-block fz-13 fw-500 bord-top-white pt-20px opacity-7 color-white">
-                        We exist to deliver reliability in every connection and confidence in every product.
-                    </span>
+            <!-- Mobile Swiper (hidden on desktop) -->
+            <div class="mv-mobile-swiper swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="item sub-bg">
+                            <span class="mv-icon mb-40px sm-mb-15px">
+                                <img src="assets/imgs/1.svg" class="h-60px" alt="">
+                            </span>
+                            <span class="d-block text-uppercase ls-1 fz-12 mb-10px opacity-7">Vision</span>
+                            <h5 class="mb-30px">Where we're headed</h5>
+                            <blockquote class="bord-left pl-20px mb-30px">
+                                <p class="fz-14 fw-500 fst-italic">"To build a future powered by quality, driven by innovation, and guided by responsibility."</p>
+                            </blockquote>
+                            <p class="fz-14 opacity-8 mb-20px">The Plaza Group envisions becoming a technology-driven enterprise delivering advanced electrical solutions across markets. Our focus remains on innovation, expansion, and sustainable growth, while consistently upholding the highest standards of quality and reliability.</p>
+                            <span class="d-block fz-13 fw-500 bord-top pt-20px">
+                                At Plaza, quality defines us. Growth inspires us. Responsibility guides us.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="item bg-dark">
+                            <span class="mv-icon mb-40px sm-mb-15px">
+                                <img src="assets/imgs/2.svg" class="h-60px" alt="">
+                            </span>
+                            <span class="d-block text-uppercase ls-1 fz-12 mb-10px opacity-5 color-white text-white">Mission</span>
+                            <h5 class="mb-30px color-white">What drives us every day</h5>
+                            <blockquote class="bord-left-white pl-20px mb-30px">
+                                <p class="fz-14 fw-500 fst-italic color-white text-white">"To consistently deliver dependable electrical solutions that exceed standards and expectations."</p>
+                            </blockquote>
+                            <p class="fz-14 opacity-7 mb-20px color-white text-white">Our mission is to consistently provide high-performance electrical products while maintaining uncompromising quality standards, strengthening our distribution network, and fostering long-term relationships with customers, partners, and communities.</p>
+                            <p class="fz-14 opacity-7 mb-20px color-white text-white">Through innovation, operational excellence, and responsible practices, we strive to create reliable connections that support modern infrastructure and everyday life.</p>
+                            <span class="d-block fz-13 fw-500 bord-top-white pt-20px opacity-7 color-white">
+                                We exist to deliver reliability in every connection and confidence in every product.
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- Pagination dots -->
+                <div class="swiper-pagination mv-swiper-pagination"></div>
             </div>
 
         </div>
     </div>
 </section>
 
+<!-- Swiper JS -->
+
+
 <section class="features pt-200px pb-200px" style="z-index: 0 !important;">
-    <div class="container pt-100px pb-200px">
+    <div class="container pt-100px pb-200px sm-pb-70px">
         <div class="sec-head text-align-center stack-title text-uppercase md-hide">
             <h2 class="text-dark">why plaza</h2>
         </div>
 
-        <div class="why-sub-head text-align-center mb-60px" data-ui-animate data-delay="0.1">
+        <div class="why-sub-head text-align-center mb-60px sm-mb-30px" data-ui-animate data-delay="0.1">
             <h2 class="sec-label1 mb-15px text-dark">Built on Quality, Safety & Innovation</h2>
             <p class="why-desc">At Plaza Group, we bring together strong industry expertise and advanced technology to deliver electrical solutions that are safe, reliable, and built to last. Driven by a commitment to quality, innovation, and customer trust, we continue to set benchmarks in the industry.</p>
         </div>
@@ -428,36 +487,36 @@
        <div class="why-grid">
     <div class="why-card-wrap" style="grid-area: c1;" data-ui-animate data-delay="0.2">
         <div class="item mb-60px">
-            <div class="w-60px mb-30px"><img src="assets/imgs/serv/1.svg" alt=""></div>
-            <h6 class="mb-80px">Decades of Expertise</h6>
+            <div class="w-60px mb-30px sm-mb-10px"><img src="assets/imgs/1.svg" alt=""></div>
+            <h6 class="mb-80px sm-mb-20px">Decades of Expertise</h6>
             <p>Over 50 years of industry experience delivering trusted electrical solutions across India.</p>
         </div>
     </div>
     <div class="why-card-wrap" style="grid-area: c2;" data-ui-animate data-delay="0.2">
         <div class="item bg-light main-colorbg">
-            <div class="w-60px mb-30px"><img src="assets/imgs/serv/2.svg" alt=""></div>
-            <h6 class="mb-80px">Quality You Can Rely On</h6>
+            <div class="w-60px mb-30px sm-mb-10px"><img src="assets/imgs/2.svg" alt=""></div>
+            <h6 class="mb-80px sm-mb-20px">Quality You Can Rely On</h6>
             <p>Products manufactured with high-grade materials and strict quality standards.</p>
         </div>
     </div>
     <div class="why-card-wrap" style="grid-area: c3;" data-ui-animate data-delay="0.2">
         <div class="item">
-            <div class="w-60px mb-30px"><img src="assets/imgs/serv/7.svg" alt=""></div>
-            <h6 class="mb-80px">Innovation Driven</h6>
+            <div class="w-60px mb-30px sm-mb-10px"><img src="assets/imgs/7.svg" alt=""></div>
+            <h6 class="mb-80px sm-mb-20px">Innovation Driven</h6>
             <p>Modern technology and continuous innovation to meet evolving electrical needs.</p>
         </div>
     </div>
     <div class="why-card-wrap" style="grid-area: c4;" data-ui-animate data-delay="0.2">
         <div class="item bg-light main-colorbg">
-            <div class="w-60px mb-30px"><img src="assets/imgs/serv/6.svg" alt=""></div>
-            <h6 class="mb-80px">Complete Product Range</h6>
+            <div class="w-60px mb-30px sm-mb-10px"><img src="assets/imgs/6.svg" alt=""></div>
+            <h6 class="mb-80px sm-mb-20px">Complete Product Range</h6>
             <p>From house wires to conduit pipes and accessories, we provide comprehensive solutions.</p>
         </div>
     </div>
     <div class="why-card-wrap" style="grid-area: c5;" data-ui-animate data-delay="0.2">
         <div class="item ">
-            <div class="w-60px mb-30px"><img src="assets/imgs/serv/2.svg" alt=""></div>
-            <h6 class="mb-80px">Safety First</h6>
+            <div class="w-60px mb-30px sm-mb-10px"><img src="assets/imgs/2.svg" alt=""></div>
+            <h6 class="mb-80px sm-mb-20px">Safety First</h6>
             <p>Engineered with safety-focused designs for dependable and long-lasting performance.</p>
         </div>
     </div>
@@ -474,7 +533,7 @@
         <!-- Image -->
         <div class="plz-nl-img-col">
           <div class="plz-nl-img-wrap">
-            <img src="assets/imgs/product-plaza-03.png" alt="Plaza Electrical Solutions">
+            <img src="assets/imgs/plaza-cta.png" alt="Plaza Electrical Solutions">
           </div>
         </div>
 
@@ -506,9 +565,9 @@
   </div>
 </section>
 
-<section class="serv-style2 serv-style22 pt-200px pb-100px">
-    <div class="container pt-100px">
-        <div class="sec-head bord mb-80px">
+<section class="serv-style2 serv-style22 pt-200px pb-100px sm-pb-50px">
+    <div class="container pt-100px sm-pt-70px">
+        <div class="sec-head bord mb-80px sm-mb-20px">
             <div class="row justify-content-between">
                 <div class="col-lg-4">
                     <h6 class="pc-eyebrow text-uppercase">Our Company</h6>
@@ -536,7 +595,7 @@
                                     <span class="plz-co-tagline">Your Powerful Partner</span>
                                     <h2 class="fs-60"><a href="https://www.plazawires.in" target="_blank">Plaza Wires</a></h2>
                                 </div>
-                                <div class="mt-40px">
+                                <div class="mt-40px sm-mt-20px">
                                     <p>Established in 1975 and primarily known as R.K. Cables, Plaza Wires Limited has grown to become one of India's most trusted and rapidly expanding companies in the electrical sector. Renowned for high-quality domestic wiring solutions, Low Tension (LT) cables, and a comprehensive range of allied electrical products.</p>
                                     <p class="mt-15px">In 2023, the company reached a significant milestone by going public, reflecting the strong confidence and trust placed in us by customers and stakeholders alike.</p>
                                     <div class="tags mt-20px">
@@ -559,7 +618,7 @@
                         </div>
                         <div class="col-lg-6  p-0 md-hide">
                             <div class="fit-img h-100">
-                                <img src="assets/imgs/product-plaza-01.webp" alt="Plaza Wires" class="pz-product-img">
+                                <img src="assets/imgs/product-plaza-wire-about.png" alt="Plaza Wires" class="pz-product-img">
                             </div>
                         </div>
                     </div>
@@ -575,7 +634,7 @@
                                     <span class="plz-co-tagline" style="color:#fff; opacity:0.7;">Har Building Ki Life PCG Pipe</span>
                                     <h2 class="fs-60"><a href="#!">PCG</a></h2>
                                 </div>
-                                <div class="mt-40px">
+                                   <div class="mt-40px sm-mt-20px">
                                     <p>Founded in 2009, PCG has emerged as a leading manufacturer and marketer of PVC Conduit Pipes, MCBs, Insulation Tapes, and a wide range of allied products. Our state-of-the-art manufacturing facility in Uttar Pradesh combines advanced technology with premium-grade materials.</p>
                                     <p class="mt-15px">Certified under ISO 9001:2015 and ISO 14001:2015, each product is manufactured in strict compliance with Indian (BIS) and international standards.</p>
                                     <div class="tags mt-20px">
@@ -597,7 +656,7 @@
                         </div>
                         <div class="col-lg-6  p-0 md-hide">
                             <div class="fit-img h-100">
-                                <img src="assets/imgs/product-plaza-02.png" alt="PCG Products" class="pz-product-img">
+                                <img src="assets/imgs/product-plaza-pcg-02.png" alt="PCG Products" class="pz-product-img">
                             </div>
                         </div>
                     </div>
@@ -613,7 +672,7 @@
                                     <span class="plz-co-tagline">Har Jhatka Jhel Jaaye</span>
                                     <h2 class="fs-60 text-dark"><a href="#!">Action Wires</a></h2>
                                 </div>
-                                <div class="mt-40px">
+                                   <div class="mt-40px sm-mt-20px">
                                     <p>Founded in 2021, Action Wires was created to offer high-quality, pocket-friendly wiring solutions pan India. As a competitive yet quality brand, it provides reliable wiring accessible to Tier 1 and Tier 2 Indian households and businesses.</p>
                                     <p class="mt-15px">With modern manufacturing practices and strict quality standards, Action Wires reflects Plaza Cables' commitment to innovative solutions that combine quality, affordability, and accessibility.</p>
                                     <div class="plz-co-stats mt-20px">
@@ -644,7 +703,7 @@
                         </div>
                         <div class="col-lg-6  p-0 md-hide">
                             <div class="fit-img h-100">
-                                <img src="assets/imgs/product-plaza-03.png" alt="Action Wires" class="pz-product-img">
+                                <img src="assets/imgs/product-plaza-actionwire.png" alt="Action Wires" class="pz-product-img">
                             </div>
                         </div>
                     </div>
@@ -760,9 +819,9 @@
     </div>
   </div>
 </section> -->
-<section class="plz-jn-h-section" id="plzJnSection">
+<section class="plz-jn-h-section sm-pt-0px" id="plzJnSection">
   <div class="container">
-     <div class="sec-head bord mb-80px" data-ui-animate data-delay="0.1">
+     <div class="sec-head bord mb-80px sm-mb-20px sm-pt-0px" data-ui-animate data-delay="0.1">
       <div class="row justify-content-between">
         <div class="col-lg-4">
           <h6 class="pc-eyebrow text-uppercase">Our Journey</h6>
@@ -936,9 +995,8 @@
   </div><!-- /.plz-jn-h-sticky -->
 </section>
 
-
 <section class="plaza-cta-section about-cta-negative-margin pt-0 pb-0">
-    <div class="shape-bottom-left w-250px " data-speed="0.7" data-lag="0">
+    <div class="shape-bottom-left sm-none w-250px " data-speed="0.7" data-lag="0">
         <!-- opacity-5 -->
         <!-- <img src="assets/imgs/mshap3.png" alt=""> -->
         <img src="assets/imgs/Aerial-Bunched-Cable.png" alt="">
@@ -952,6 +1010,9 @@
                     <h2 class="cta-heading">
                         Looking for Reliable<br>Electrical Solutions?
                     </h2>
+                    <p class="cta-description sm-block">
+                        [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
+                    </p>
                     <div class="cta-actions">
                         <a href="#!" class="butn-arrow-white">
                             <span class="text-uppercase fs-14 fw-500">Get in Touch</span>
@@ -966,7 +1027,7 @@
 
                 <!-- Right: description text -->
                 <div class="cta-content-right">
-                    <p class="cta-description">
+                    <p class="cta-description sm-none">
                         [ Discover Plaza's complete range of wires, cables, electrical conduit pipes, and allied electrical products designed for safety, efficiency, and long-lasting performance. ]
                     </p>
                 </div>
@@ -1113,6 +1174,43 @@
     <script src="assets/js/smoother-script.js"></script>
     <script src="assets/js/springer.min.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+(function () {
+    var mq = window.matchMedia('(max-width: 991px)');
+    var swiperInstance = null;
+
+    function initSwiper() {
+        if (swiperInstance) return;
+        swiperInstance = new Swiper('.mv-mobile-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            pagination: {
+                el: '.mv-swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
+
+    function destroySwiper() {
+        if (swiperInstance) {
+            swiperInstance.destroy(true, true);
+            swiperInstance = null;
+        }
+    }
+
+    function handleBreakpoint(e) {
+        if (e.matches) {
+            initSwiper();
+        } else {
+            destroySwiper();
+        }
+    }
+
+    mq.addEventListener('change', handleBreakpoint);
+    handleBreakpoint(mq); // run on load
+})();
+</script>
     <!-- <script>
         $(function () {
             var width = $(window).width();
