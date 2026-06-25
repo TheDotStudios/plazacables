@@ -10701,10 +10701,12 @@ footer .subscribe p a {
   width: auto;
   height: 100%;
 }
-/* ---- your provided serv-style4 CSS (unchanged) ---- */
+
 .serv-style4 .item{
   position:relative; padding:60px 40px; border-radius:30px;
-  border:1px solid rgba(255,255,255,.3); min-height:520px;
+  border:1px solid rgba(255,255,255,.3); 
+  /* min-height:520px; */
+  min-height:440px;
   overflow:hidden; transition:all .4s; z-index:2;
 }
 .serv-style4 .item .img{
@@ -11410,7 +11412,8 @@ border-radius: 0 0 80px 80px;
   height: auto;
 }
 .testim-style3 .tobotm {
-  margin-bottom: -30px;
+  /* margin-bottom: -30px; */
+  margin-bottom: 50px;
   position: relative;
   z-index: -1;
 }
@@ -13027,7 +13030,9 @@ body:not(.light) .plaza-brand-area::after {
     font-size: 28px;
     opacity: 0.2;
 }
-
+.plaza-ticker-item-p img{
+  max-width: 150px;
+}
 .plaza-p-name {
     font-size: 36px;
     font-weight: 500;
@@ -17877,4 +17882,10 @@ body:not(.light) .pc-abh-stat-num{ color:#fff; }
   .mv-cards-wrapper .mv-mobile-swiper{
   display: none;
 }
+}
+.pc-footer-logo img{
+max-width: 300px;
+    /* width: 220px; */
+    /* height: 200px; */
+    object-fit: cover;
 }

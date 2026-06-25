@@ -369,6 +369,15 @@ h2{
 .w-200px {
     width: 100px !important;
 }
+.plaza-ticker-item-p img {
+    max-width: 90px !important;
+}
+.pc-footer-logo img {
+    max-width: 120px !important;
+    /* width: 220px; */
+    /* height: 200px; */
+    object-fit: cover;
+}
 .hero-style1{
     height: auto !important;
 }
