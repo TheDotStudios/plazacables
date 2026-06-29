@@ -126,6 +126,11 @@
 }
 
 @media screen and (min-width:1200px) and (max-width:1599px) {
+    .why-sub-head .sec-label1 {
+    max-width: 430px !important;
+    margin: 0 auto;
+
+}
     .hero-style1{
         height: unset !important;
     }
@@ -188,7 +193,7 @@ h5 {
     display: block;
     font-size: 28px !important;
     font-weight: 600;
-    color: #fff;
+    /* color: #fff; */
     /* line-height: 1; */
     margin-bottom: 4px;
 }
@@ -350,6 +355,9 @@ h2{
     }
     .sm-none{
         display:none !important;
+    }
+    .sm-bord-right{
+        border-right: none !important;
     }
     .fs-18 {
     font-size: 15px !important;
